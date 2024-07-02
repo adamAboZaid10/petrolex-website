@@ -18,7 +18,7 @@ class CustomAppBar extends StatelessWidget {
           children: [
             Expanded(
               child: Text(
-                'Company Logo',
+                'Petrolex Oil',
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 20.sp,
