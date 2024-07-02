@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_web/features/about_us/presentation/views/screens/about_us.dart';
 import 'package:flutter_web/features/home/presentation/views/screens/home_screen.dart';
 
 
@@ -14,6 +15,8 @@ class AppRoutes {
      
       case home:
         return transitionPage(const HomeScreen());
+      case aboutUs:
+        return transitionPage(const AboutUsScreen());
       default:
         return transitionPage(const HomeScreen());
     }
