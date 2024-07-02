@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_web/core/Routing/app_routes.dart';
 import 'package:flutter_web/core/utils/app_colors.dart';
 
@@ -11,14 +12,19 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  MaterialApp(
-      theme: ThemeData().copyWith(
-        scaffoldBackgroundColor: AppColors.backgroundColor,
+    return  ScreenUtilInit(
+      designSize: const Size( 690,360),
+      minTextAdapt: true,
+      splitScreenMode: true,
+      child: MaterialApp(
+        theme: ThemeData().copyWith(
+          scaffoldBackgroundColor: AppColors.backgroundColor,
+        ),
+        debugShowCheckedModeBanner: false,
+        title: 'Flutter web',
+        initialRoute: AppRoutes.home,
+        onGenerateRoute: AppRoutes.generateRoute,
       ),
-      debugShowCheckedModeBanner: false,
-      title: 'Flutter web',
-      initialRoute: AppRoutes.home,
-      onGenerateRoute: AppRoutes.generateRoute,
     );
   }
 }
