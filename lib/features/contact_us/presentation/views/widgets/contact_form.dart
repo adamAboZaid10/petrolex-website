@@ -93,3 +93,109 @@ class ContactUsForm extends StatelessWidget {
     );
   }
 }
+
+
+class ContactUsMobileForm extends StatelessWidget {
+  const ContactUsMobileForm({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.symmetric(horizontal: 20.0.sp),
+      child: Container(
+
+        decoration: BoxDecoration(
+          color: AppColors.backgroundColor,
+          borderRadius: BorderRadius.circular(10.r),
+        ),
+        child: Padding(
+          padding: EdgeInsets.all(24.0.sp),
+          child: Form(
+            key: ContactUsData.formKey,
+            child: Column(
+              children: [
+                CustomTextField(
+                  validator: (value) {
+                    if (value == null || value.isEmpty) {
+                      return 'Please enter your name';
+                    }
+                    return null;
+                  },
+                  controller: ContactUsData.nameController,
+                  label: "Name",
+                  hintText: "Enter your name",
+                  labelFontSize: 20,
+                  height: 70,
+                  textFontSize: 25,
+                  astricFontSize: 15,
+                ),
+                SizedBox(height: 10.h),
+                CustomTextField(
+                  validator: (value) {
+                    if (value == null || value.isEmpty) {
+                      return 'Please enter your Number';
+                    }
+                    return null;
+                  },
+                  controller: ContactUsData.numberController,
+                  label: "Number",
+                  hintText: "Enter your Number",
+                  labelFontSize: 20,
+                  height: 70,
+                  textFontSize: 25,
+                  astricFontSize: 15,
+                ),
+                SizedBox(height: 10.h),
+                CustomTextField(
+                  validator: (value) {
+                    if (value == null || value.isEmpty) {
+                      return 'Please enter your Email';
+                    }
+                    return null;
+                  },
+                  controller: ContactUsData.emailController,
+                  label: "Email",
+                  hintText: "Enter your Email",
+                  labelFontSize: 20,
+                  height: 70,
+                  textFontSize: 25,
+                  astricFontSize: 15,
+                ),
+                SizedBox(height: 10.h),
+                CustomTextField(
+                  validator: (value) {
+                    if (value == null || value.isEmpty) {
+                      return 'Please enter your Message';
+                    }
+                    return null;
+                  },
+                  controller: ContactUsData.messageController,
+                  label: "Message",
+                  hintText: "Enter your Message",
+                  maxLines: 5,
+                  labelFontSize: 20,
+                  height: 70,
+                  textFontSize: 25,
+                  astricFontSize: 15,
+                ),
+                SizedBox(height: 15.h),
+                CustomDefaultButton(
+                  backgroundColor: AppColors.lightBrownColor,
+                  onTap: () {
+                    if (ContactUsData.formKey.currentState!.validate()) {
+                      ContactUsData.formKey.currentState!.save();
+                      ContactUsData.formKey.currentState!.reset();
+                    }
+                  },
+                  text: 'Send',
+                  width: double.infinity,
+                  height: 50,
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}

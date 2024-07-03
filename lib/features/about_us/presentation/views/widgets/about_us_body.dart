@@ -19,3 +19,18 @@ class AboutUsBody extends StatelessWidget {
     );
   }
 }
+
+class AboutUsMobileBody extends StatelessWidget {
+  const AboutUsMobileBody({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        const AboutUsMobileImageSection(),
+        const AboutUsMobileDetails(),
+        FooterMobileWidget(),
+      ],
+    );
+  }
+}

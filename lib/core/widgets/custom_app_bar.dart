@@ -3,10 +3,11 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_web/core/utils/app_colors.dart';
 import 'package:flutter_web/core/widgets/custom_button_app_bar_widget.dart';
 import 'package:flutter_web/features/contact_us/presentation/views/screens/contact_us_screen.dart';
+import 'package:flutter_web/features/home/presentation/views/screens/home_screen_web.dart';
 import 'package:flutter_web/features/products/presentation/view/screeens/products_screen.dart';
 
 import '../../features/about_us/presentation/views/screens/about_us.dart';
-import '../Routing/app_routes.dart';
+import '../../features/home/presentation/views/screens/home_screen_mobile.dart';
 
 class CustomAppBar extends StatelessWidget {
   const CustomAppBar({super.key});
@@ -33,36 +34,44 @@ class CustomAppBar extends StatelessWidget {
             ),
             CustomButtonAppBarWidget(
               onTap: () {
-                Navigator.pushNamed(
+                Navigator.push(
                   context,
-                  AppRoutes.home,
+                  MaterialPageRoute(
+                    builder: (context) => const HomeScreen(),
+                  ),
                 );
               },
               title: 'Home',
             ),
             CustomButtonAppBarWidget(
               onTap: () {
-                Navigator.pushNamed(
+                Navigator.push(
                   context,
-                  AppRoutes.aboutUs,
+                  MaterialPageRoute(
+                    builder: (context) => const AboutUsScreen(),
+                  ),
                 );
               },
               title: 'About us',
             ),
             CustomButtonAppBarWidget(
               onTap: () {
-                Navigator.pushNamed(
+                Navigator.push(
                   context,
-                  AppRoutes.products,
+                  MaterialPageRoute(
+                    builder: (context) => const ProductsScreen(),
+                  ),
                 );
               },
               title: 'Products',
             ),
             CustomButtonAppBarWidget(
               onTap: () {
-                Navigator.pushNamed(
+                Navigator.push(
                   context,
-                  AppRoutes.contactUs,
+                  MaterialPageRoute(
+                    builder: (context) => const ContactUsScreen(),
+                  ),
                 );
               },
               title: 'Contact us',
@@ -99,7 +108,12 @@ class CustomAppBarMobile extends StatelessWidget {
             ),
             CustomButtonAppBarWidget(
               onTap: () {
-
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const HomeScreenMobile(),
+                  ),
+                );
               },
               title: 'Home',
               fontSize: 20,
@@ -109,7 +123,7 @@ class CustomAppBarMobile extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => AboutUsScreen(),
+                    builder: (context) => const AboutUsMobileScreen(),
                   ),
                 );
               },
@@ -121,7 +135,7 @@ class CustomAppBarMobile extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => ProductsScreen(),
+                    builder: (context) => const ProductsMobileScreen(),
                   ),
                 );
               },
@@ -133,7 +147,7 @@ class CustomAppBarMobile extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => ContactUsScreen(),
+                    builder: (context) => const ContactUsMobileScreen(),
                   ),
                 );
               },

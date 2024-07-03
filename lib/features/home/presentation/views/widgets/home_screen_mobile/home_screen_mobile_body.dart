@@ -28,7 +28,7 @@ class HomeScreenMobileBody extends StatelessWidget {
               SizedBox(
                 height: 20.h,
               ),
-              CustomCarouselWidget(
+              CustomCarouselMobileWidget(
                 imgList: imgList,
                 onPageChanged: (index, reason) {
                   context.read<HomeBloc>().add(CarouselSliderEvent(index));
@@ -37,13 +37,13 @@ class HomeScreenMobileBody extends StatelessWidget {
               SizedBox(
                 height: 20.h,
               ),
-              const CustomDefineAboutCompanyWidget(),
+              const CustomDefineAboutCompanyMobileWidget(),
               SizedBox(
                 height: 20.h,
               ),
-              const CustomOurServices(),
+              const CustomMobileOurServices(),
               SizedBox(height: 20.h),
-              const CustomOurMission(),
+              const CustomOurMissionMobile(),
               SizedBox(
                 height: 20.h,
               ),

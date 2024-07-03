@@ -20,3 +20,19 @@ class ProductsScreenBody extends StatelessWidget {
     );
   }
 }
+
+class ProductsMobileScreenBody extends StatelessWidget {
+  const ProductsMobileScreenBody({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return  Column(
+      children: [
+       const CustomTopImageMobileProductsScreen(),
+        SizedBox(height: 20.h,),
+        const CustomGirdViewMobileProducts(),
+        FooterMobileWidget(),
+      ],
+    );
+  }
+}

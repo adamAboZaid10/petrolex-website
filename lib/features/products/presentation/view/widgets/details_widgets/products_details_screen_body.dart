@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_web/core/utils/app_colors.dart';
 import 'package:flutter_web/features/products/presentation/view/widgets/details_widgets/products_details.dart';
 import 'package:flutter_web/features/products/presentation/view/widgets/products_widget/top_image.dart';
 
@@ -19,6 +20,26 @@ class ProductsDetailsScreenBody extends StatelessWidget {
        const ProductsDetails(),
         FooterWidget(),
       ],
+    );
+  }
+}
+
+
+class ProductsDetailsMobileScreenBody extends StatelessWidget {
+  const ProductsDetailsMobileScreenBody({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return  Container(
+      color: AppColors.backgroundColor,
+      child: Column(
+        children: [
+          const CustomTopImageMobileProductsScreen(),
+          SizedBox(height: 20.h,),
+         const ProductsMobileDetails(),
+          FooterMobileWidget(),
+        ],
+      ),
     );
   }
 }

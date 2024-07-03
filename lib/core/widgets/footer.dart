@@ -186,8 +186,8 @@ final formKey = GlobalKey<FormState>();
                 children: [
                   Lottie.asset(
                     'assets/lotttie/submit.json',
-                    width: 100.sp,
-                    height: 100.sp,
+                    width: 140.sp,
+                    height: 140.sp,
                   ),
                   SizedBox(height: 10.sp),
                   SizedBox(

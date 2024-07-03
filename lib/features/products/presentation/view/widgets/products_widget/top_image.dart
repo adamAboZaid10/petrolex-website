@@ -16,3 +16,19 @@ class CustomTopImageProductsScreen extends StatelessWidget {
     );
   }
 }
+
+class CustomTopImageMobileProductsScreen extends StatelessWidget {
+  const CustomTopImageMobileProductsScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return  SizedBox(
+      height: 200.sp,
+      width: double.infinity,
+      child: Image.asset(
+        'assets/image/slider3.jpg',
+        fit: BoxFit.cover,
+      ),
+    );
+  }
+}

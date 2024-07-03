@@ -46,3 +46,43 @@ class CustomCarouselWidget extends StatelessWidget {
     );
   }
 }
+class CustomCarouselMobileWidget extends StatelessWidget {
+  const CustomCarouselMobileWidget({
+    super.key,
+    required this.imgList,
+    required this.onPageChanged,
+  });
+
+  final List<String> imgList;
+
+  final Function(int, CarouselPageChangedReason)? onPageChanged;
+
+  @override
+  Widget build(BuildContext context) {
+    return CarouselSlider(
+      options: CarouselOptions(
+        height: 280.0.sp,
+        enlargeCenterPage: true,
+        autoPlay: true,
+        aspectRatio: 16 / 10,
+        autoPlayCurve: Curves.fastOutSlowIn,
+        enableInfiniteScroll: true,
+        autoPlayAnimationDuration: const Duration(milliseconds: 800),
+        onPageChanged: onPageChanged,
+      ),
+      items: imgList
+          .map(
+            (item) => Container(
+              margin: EdgeInsets.all(5.0.sp),
+              child: Image.asset(
+                item,
+                width: 4000.0.sp,
+                height: 4000.0.sp,
+                fit: BoxFit.cover,
+              ),
+            ),
+          )
+          .toList(),
+    );
+  }
+}

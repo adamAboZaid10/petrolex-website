@@ -11,22 +11,47 @@ class GetInTouchSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-
       width: 900.w,
-      decoration:const BoxDecoration(
+      decoration: const BoxDecoration(
         color: AppColors.darkGreenColor,
-       
       ),
       child: Padding(
-        padding: EdgeInsets.only(top:10.0.sp),
-        child:  Column(
+        padding: EdgeInsets.only(top: 10.0.sp),
+        child: Column(
           children: [
             const GetInTouchSectionTitle(),
             SizedBox(height: 20.0.sp),
-          const ContactUsForm()
+            const ContactUsForm(),
           ],
         ),
-      ));
+      ),
+    );
   }
 }
+class GetInTouchMobileSection extends StatelessWidget {
+  const GetInTouchMobileSection({super.key});
 
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: double.infinity,
+      decoration: const BoxDecoration(
+        color: AppColors.darkGreenColor,
+      ),
+      child: Padding(
+        padding: EdgeInsets.only(top: 10.0.sp),
+        child: Column(
+          children: [
+            const GetInTouchSectionTitle(
+              fontTitleSize: 40,
+              fontSize: 20,
+            ),
+            SizedBox(height: 10.0.h),
+            const ContactUsMobileForm(),
+            SizedBox(height: 10.h,),
+          ],
+        ),
+      ),
+    );
+  }
+}

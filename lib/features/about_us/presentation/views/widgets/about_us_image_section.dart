@@ -18,3 +18,21 @@ class AboutUsImageSection extends StatelessWidget {
     );
   }
 }
+
+class AboutUsMobileImageSection extends StatelessWidget {
+  const AboutUsMobileImageSection({
+    super.key,
+  });
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 200.sp,
+      decoration:const  BoxDecoration(
+        image: DecorationImage(
+          image: AssetImage('assets/image/new_about_us.jfif'),
+          fit: BoxFit.cover,
+        )
+      ),
+    );
+  }
+}
