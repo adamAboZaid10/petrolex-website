@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_web/core/utils/app_colors.dart';
-import 'package:flutter_web/features/home/presentation/views/widgets/custom_button_app_bar_widget.dart';
+import 'package:flutter_web/core/widgets/custom_button_app_bar_widget.dart';
+
+import '../Routing/app_routes.dart';
 
 class CustomAppBar extends StatelessWidget {
   const CustomAppBar({super.key});
@@ -27,19 +29,39 @@ class CustomAppBar extends StatelessWidget {
               ),
             ),
             CustomButtonAppBarWidget(
-              onTap: () {},
+              onTap: () {
+                Navigator.pushNamed(
+                  context,
+                  AppRoutes.home,
+                );
+              },
               title: 'Home',
             ),
             CustomButtonAppBarWidget(
-              onTap: () {},
+              onTap: () {
+                Navigator.pushNamed(
+                  context,
+                  AppRoutes.aboutUs,
+                );
+              },
               title: 'About us',
             ),
             CustomButtonAppBarWidget(
-              onTap: () {},
+              onTap: () {
+                Navigator.pushNamed(
+                  context,
+                  AppRoutes.products,
+                );
+              },
               title: 'Products',
             ),
             CustomButtonAppBarWidget(
-              onTap: () {},
+              onTap: () {
+                Navigator.pushNamed(
+                  context,
+                  AppRoutes.contactUs,
+                );
+              },
               title: 'Contact us',
             ),
           ],

@@ -34,6 +34,7 @@ dependencies:
   carousel_slider: ^4.2.1
   cupertino_icons: ^1.0.6
   flutter_screenutil: ^5.9.3
+  google_fonts: ^6.2.1
   flutter:
     sdk: flutter
   flutter_bloc: ^8.1.6
@@ -69,10 +70,10 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  # fonts:
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
+  fonts:
+    - family: PlaywrightItaliaModerna
+      fonts:
+        - asset: assets/fonts/PlaywriteITModerna-VariableFont_wght.ttf
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro
