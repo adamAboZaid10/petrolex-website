@@ -22,7 +22,7 @@ class CustomOurMission extends  StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 SvgPicture.asset(
-                  "assets/svg/our_mission.svg",
+                  "assets/svg/rocket.svg",
                   fit: BoxFit.cover,
                   alignment: Alignment.center,
                   width: 30.sp,
@@ -49,12 +49,11 @@ class CustomOurMission extends  StatelessWidget {
           Text(
             'To create, strengthen, and Expand our reach and our services by growing our network of partners with International Leading services Provider and reaching new and bigger markets regionally in the MENA region and Beyond.',
             style: TextStyle(
-              color: AppColors.blackColor,
+              color: Colors.white,
               fontSize: 12.sp,
               fontWeight: FontWeight.w400,
             ),
           ),
-
         ],
       ),
     );

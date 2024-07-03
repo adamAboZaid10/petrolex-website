@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_web/features/home/presentation/controller/home_bloc.dart';
@@ -12,15 +13,29 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (context) => HomeBloc(),
-      child: const Scaffold(
-        body: Column(
+      child:  Scaffold(
+        body: Stack(
           children: [
-            CustomAppBar(),
-            Expanded(
-              child: SingleChildScrollView(
-                physics: BouncingScrollPhysics(),
-                child: HomeScreenBody(),
+            Container(
+              width: MediaQuery.of(context).size.width,
+              height: MediaQuery.of(context).size.height,
+              decoration: const BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage('assets/image/background.jpg'),
+                  fit: BoxFit.cover,
+                ),
               ),
+            ),
+           const  Column(
+              children: [
+                CustomAppBar(),
+                Expanded(
+                  child: SingleChildScrollView(
+                    physics: BouncingScrollPhysics(),
+                    child: HomeScreenBody(),
+                  ),
+                ),
+              ],
             ),
           ],
         ),

@@ -11,17 +11,16 @@ class ContactUsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body: SingleChildScrollView(
-        child: Column(
+      body: Column(
         children: [
           CustomAppBar(),
-          ContactUsBody(),
-        
+          Expanded(
+            child: SingleChildScrollView(
+              child: ContactUsBody(),
+            ),
+          ),
         ],
-        ),
       ),
     );
   }
 }
-
-

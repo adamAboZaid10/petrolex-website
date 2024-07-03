@@ -5,6 +5,7 @@ import 'package:flutter_web/features/home/presentation/controller/home_bloc.dart
 import 'package:flutter_web/features/home/presentation/views/widgets/custom_define_about_company_widget.dart';
 import 'package:flutter_web/features/home/presentation/views/widgets/custom_our_mission.dart';
 import 'package:flutter_web/features/home/presentation/views/widgets/custom_our_services.dart';
+import '../../../../../core/widgets/footer.dart';
 import 'custom_carousal_widget.dart';
 
 class HomeScreenBody extends StatelessWidget {
@@ -44,6 +45,8 @@ class HomeScreenBody extends StatelessWidget {
               SizedBox(
                 height: 20.h,
               ),
+              FooterWidget(),
+
             ],
           ),
         );

@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
         ),
         debugShowCheckedModeBanner: false,
         title: 'Flutter web',
-        initialRoute: AppRoutes.contactUs,
+        initialRoute: AppRoutes.home,
         onGenerateRoute: AppRoutes.generateRoute,
       ),
     );

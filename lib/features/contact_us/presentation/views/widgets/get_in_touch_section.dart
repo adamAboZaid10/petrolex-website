@@ -11,7 +11,7 @@ class GetInTouchSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 500.h,
+
       width: 900.w,
       decoration:const BoxDecoration(
         color: AppColors.darkGreenColor,
