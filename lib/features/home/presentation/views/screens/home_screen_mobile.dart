@@ -27,16 +27,18 @@ class HomeScreenMobile extends StatelessWidget {
                 ),
               ),
             ),
-            const  Column(
-              children: [
-                CustomAppBar(),
-                Expanded(
-                  child: SingleChildScrollView(
-                    physics: BouncingScrollPhysics(),
-                    child: HomeScreenMobileBody(),
+            const SafeArea(
+              child:   Column(
+                children: [
+                  CustomAppBarMobile(),
+                  Expanded(
+                    child: SingleChildScrollView(
+                      physics: BouncingScrollPhysics(),
+                      child: HomeScreenMobileBody(),
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           ],
         ),

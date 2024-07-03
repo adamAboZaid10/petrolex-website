@@ -6,10 +6,12 @@ class CustomButtonAppBarWidget extends StatelessWidget {
     super.key,
     required this.onTap,
     required this.title,
+    this.fontSize = 8,
   });
 
   final String title;
   final Function()? onTap;
+  final double fontSize;
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +23,7 @@ class CustomButtonAppBarWidget extends StatelessWidget {
           title,
           style: TextStyle(
             color: Colors.white,
-            fontSize: 8.sp,
+            fontSize: fontSize.sp,
             fontWeight: FontWeight.w400,
           ),
         ),
