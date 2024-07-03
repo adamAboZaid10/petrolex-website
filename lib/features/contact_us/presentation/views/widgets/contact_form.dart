@@ -13,7 +13,7 @@ class ContactUsForm extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 20.0.sp),
       child: Container(
-        width: 500.w,
+        width: 500.sp,
         decoration: BoxDecoration(
           color: AppColors.backgroundColor,
           borderRadius: BorderRadius.circular(10.r),

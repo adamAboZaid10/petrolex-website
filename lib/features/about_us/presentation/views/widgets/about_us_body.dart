@@ -10,21 +10,21 @@ class AboutUsBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
+    return const Stack(
 
       children: [
-        Container(
-          height:MediaQuery.of(context).size.height*2,
-          width: double.infinity.w,
-          decoration: BoxDecoration(
-            color: AppColors.darkGreenColor,
-          ),
-        ),
+        // Container(
+        //   height:MediaQuery.of(context).size.height*2,
+        //   width: double.infinity.w,
+        //   decoration: BoxDecoration(
+        //     color: AppColors.darkGreenColor,
+        //   ),
+        // ),
         Column(
           children: [
             AboutUsImageSection(),
 
-            const AboutUsDetails()
+             AboutUsDetails()
           ],
         ),
       ],
