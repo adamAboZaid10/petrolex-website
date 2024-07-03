@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_web/features/about_us/presentation/views/screens/about_us.dart';
 import 'package:flutter_web/features/contact_us/presentation/views/screens/contact_us_screen.dart';
-import 'package:flutter_web/features/home/presentation/views/screens/home_screen.dart';
+import 'package:flutter_web/features/home/presentation/views/screens/home_screen_web.dart';
 import 'package:flutter_web/features/products/presentation/view/screeens/products_details_screen.dart';
 import 'package:flutter_web/features/products/presentation/view/screeens/products_screen.dart';
 

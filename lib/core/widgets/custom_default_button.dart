@@ -10,6 +10,7 @@ class CustomDefaultButton extends StatelessWidget {
     required this.width,
     required this.height,
     required this.backgroundColor,
+    this.fontSize = 12,
   });
 
   final Function()? onTap;
@@ -18,6 +19,7 @@ class CustomDefaultButton extends StatelessWidget {
   final double width;
   final double height;
   final Color backgroundColor;
+  final double fontSize;
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +35,7 @@ class CustomDefaultButton extends StatelessWidget {
         child: Center(
           child: Text(
             text,
-            style: TextStyle(color: Colors.white, fontSize: 12.sp),
+            style: TextStyle(color: Colors.white, fontSize: fontSize.sp),
           ),
         ),
       ),

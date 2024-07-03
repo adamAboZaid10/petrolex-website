@@ -12,6 +12,9 @@ class CustomTextField extends StatelessWidget {
   final Color hintColor;
   final Color textColor;
   final double height;
+  final double labelFontSize;
+  final double astricFontSize;
+  final double textFontSize;
 
   const CustomTextField({
     super.key,
@@ -25,6 +28,10 @@ class CustomTextField extends StatelessWidget {
     this.hintColor = Colors.grey,
     this.textColor = Colors.black,
     this.height = 40,
+    this.labelFontSize = 9,
+    this.astricFontSize = 9,
+    this.textFontSize = 9,
+
   });
 
   @override
@@ -37,7 +44,7 @@ class CustomTextField extends StatelessWidget {
             Text(
               label,
               style: TextStyle(
-                fontSize: 9.sp,
+                fontSize: labelFontSize.sp,
                 fontWeight: FontWeight.bold,
                 color: labelColor,
               ),
@@ -48,7 +55,7 @@ class CustomTextField extends StatelessWidget {
             Text(
               '*',
               style: TextStyle(
-                fontSize: 9.sp,
+                fontSize: astricFontSize.sp,
                 fontWeight: FontWeight.bold,
                 color: Colors.red,
               ),
@@ -60,7 +67,7 @@ class CustomTextField extends StatelessWidget {
           height: height.sp,
           child: TextFormField(
             style: TextStyle(
-              fontSize: 9.sp,
+              fontSize: textFontSize.sp,
               fontWeight: FontWeight.bold,
               color: textColor,
             ),
@@ -70,7 +77,7 @@ class CustomTextField extends StatelessWidget {
                 borderRadius: BorderRadius.circular(5.r),
               ),
               hintStyle: TextStyle(
-                fontSize: 9.sp,
+                fontSize: textFontSize.sp,
                 fontWeight: FontWeight.bold,
                 color: hintColor,
               ),
