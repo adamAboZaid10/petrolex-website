@@ -5,7 +5,6 @@ class AboutUsImageSection extends StatelessWidget {
   const AboutUsImageSection({
     super.key,
   });
-
   @override
   Widget build(BuildContext context) {
     return Container(

@@ -12,7 +12,7 @@ final formKey = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 400.sp,
+      height: 350.sp,
       decoration: BoxDecoration(
         color: AppColors.blackColor,
         borderRadius: BorderRadius.only(
@@ -24,116 +24,124 @@ final formKey = GlobalKey<FormState>();
         padding: EdgeInsets.all(20.sp),
         child: Form(
           key: formKey,
-          child: Row(
-           mainAxisAlignment: MainAxisAlignment.spaceAround,
+          child: Column(
+
             children: [
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  Text(
-                    'Contact Us',
-                    style: TextStyle(
-                      fontSize: 12.sp,
-                      color: Colors.white,
-                    ),
-                  ),
-                  SizedBox(height: 20.sp),
-                  SizedBox(
-                    width: 200.sp,
-                    child: CustomTextField(
-                      hintColor: Colors.grey,
-                      textColor: Colors.white,
-                      labelColor: Colors.white,
-                      validator: (value) {
-                        if (value == null || value.isEmpty) {
-                          return 'Please enter your name';
-                        }
-                        return null;
-                      },
-                      controller: ContactUsData.nameController,
-                      label: 'Name',
-                      hintText: 'Enter your name',
-                    ),
-                  ),
-                  SizedBox(height: 20.sp),
-                  SizedBox(
-                    width: 200.sp,
-                    child: CustomTextField(
-                      hintColor: Colors.grey,
-                      textColor: Colors.white,
-                      labelColor: Colors.white,
-                      validator: (value) {
-                        if (value == null || value.isEmpty) {
-                          return 'Please enter your Email';
-                        }
-                        return null;
-                      },
-                      controller: ContactUsData.emailController,
-                      label: 'Email',
-                      hintText: 'Enter your Email',
-                    ),
-                  ),
-                  SizedBox(height: 20.sp),
-                  SizedBox(
-                    width: 200.sp,
-                    child: CustomTextField(
-                      hintColor: Colors.grey,
-                      textColor: Colors.white,
-                      labelColor: Colors.white,
-                      validator: (value) {
-                        if (value == null || value.isEmpty) {
-                          return 'Please enter your Number';
-                        }
-                        return null;
-                      },
-                      controller: ContactUsData.numberController,
-                      label: 'Number',
-                      hintText: 'Enter your Number',
-                    ),
-                  ),
-                  SizedBox(height: 20.sp),
-                  SizedBox(
-                    width: 200.sp,
-                    child: CustomTextField(
-                      height: 60,
-                      hintColor: Colors.grey,
-                      textColor: Colors.white,
-                      labelColor: Colors.white,
-                      validator: (value) {
-                        if (value == null || value.isEmpty) {
-                          return 'Please enter your Message';
-                        }
-                        return null;
-                      },
-                      controller: ContactUsData.messageController,
-                      label: 'Message',
-                      maxLines: 6,
-                      hintText: 'Enter your Message',
-                    ),
-                  ),
-                ],
+              Text(
+                'Contact Us',
+                style: TextStyle(
+                  fontSize: 12.sp,
+                  color: Colors.white,
+                ),
               ),
-              SizedBox(width: 20.sp),
-              Column(
+              Row(
+               mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Lottie.asset(
-                    'assets/lotttie/submit.json',
-                    width: 200.sp,
-                    height: 200.sp,
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      SizedBox(height: 10.sp),
+                      SizedBox(
+                        width: 200.sp,
+                        child: CustomTextField(
+                          height: 30,
+                          hintColor: Colors.grey,
+                          textColor: Colors.white,
+                          labelColor: Colors.white,
+                          validator: (value) {
+                            if (value == null || value.isEmpty) {
+                              return 'Please enter your name';
+                            }
+                            return null;
+                          },
+                          controller: ContactUsData.nameController,
+                          label: 'Name',
+                          hintText: 'Enter your name',
+                        ),
+                      ),
+                      SizedBox(height: 10.sp),
+                      SizedBox(
+                        width: 200.sp,
+                        child: CustomTextField(
+                          hintColor: Colors.grey,
+                          textColor: Colors.white,
+                          labelColor: Colors.white,
+                          validator: (value) {
+                            if (value == null || value.isEmpty) {
+                              return 'Please enter your Email';
+                            }
+                            return null;
+                          },
+                          controller: ContactUsData.emailController,
+                          label: 'Email',
+                          hintText: 'Enter your Email',
+                          height: 30,
+                        ),
+                      ),
+                      SizedBox(height: 10.sp),
+                      SizedBox(
+                        width: 200.sp,
+                        child: CustomTextField(
+                          hintColor: Colors.grey,
+                          textColor: Colors.white,
+                          labelColor: Colors.white,
+                          validator: (value) {
+                            if (value == null || value.isEmpty) {
+                              return 'Please enter your Number';
+                            }
+                            return null;
+                          },
+                          controller: ContactUsData.numberController,
+                          label: 'Number',
+                          hintText: 'Enter your Number',
+                          height: 30,
+                        ),
+                      ),
+                      SizedBox(height: 10.sp),
+                      SizedBox(
+                        width: 200.sp,
+                        child: CustomTextField(
+                          height: 60,
+                          hintColor: Colors.grey,
+                          textColor: Colors.white,
+                          labelColor: Colors.white,
+                          validator: (value) {
+                            if (value == null || value.isEmpty) {
+                              return 'Please enter your Message';
+                            }
+                            return null;
+                          },
+                          controller: ContactUsData.messageController,
+                          label: 'Message',
+                          maxLines: 5,
+                          hintText: 'Enter your Message',
+                        ),
+                      ),
+                    ],
                   ),
-                  SizedBox(height: 60.sp),
-                  CustomDefaultButton(
-                    backgroundColor: AppColors.lightBrownColor,
-                    onTap: () {
-                      if (formKey.currentState!.validate()) {
-                        formKey.currentState!.save();
-                        formKey.currentState!.reset();
-                      }
-                    },
-                    text: 'Submit',
-                    width: 200,
-                    height: 20,
+                  SizedBox(width: 20.sp),
+                  Column(
+                    children: [
+                      Lottie.asset(
+                        'assets/lotttie/submit.json',
+                        width: 200.sp,
+                        height: 200.sp,
+                      ),
+                      SizedBox(height: 60.sp),
+                      CustomDefaultButton(
+                        backgroundColor: AppColors.lightBrownColor,
+                        onTap: () {
+                          if (formKey.currentState!.validate()) {
+                            formKey.currentState!.save();
+                            formKey.currentState!.reset();
+                          }
+                        },
+                        text: 'Submit',
+                        width: 200,
+                        height: 20,
+                      ),
+                    ],
                   ),
                 ],
               ),

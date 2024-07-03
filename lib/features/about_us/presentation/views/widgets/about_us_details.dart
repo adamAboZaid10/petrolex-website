@@ -15,74 +15,72 @@ class AboutUsDetails extends StatelessWidget {
         ),
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: 16.0.sp, vertical: 12.0.sp),
-          child: IntrinsicHeight(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                Center(
-                  child: Text(
-                    'Our Values',
-                    style: TextStyle(
-                      fontSize: 16.sp,
-                      fontWeight: FontWeight.w400,
-                      color: Colors.white,
-                      letterSpacing: 1.2,
-                      shadows: [
-                        Shadow(
-                          blurRadius: 10.0,
-                          color: Colors.white.withOpacity(0.5),
-                          offset: const Offset(2.0, 2.0),
-                        ),
-                      ],
-                      fontFamily: 'PlaywrightItaliaModerna', // Use a font that looks elegant
-                    ),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              Center(
+                child: Text(
+                  'Our Values',
+                  style: TextStyle(
+                    fontSize: 16.sp,
+                    fontWeight: FontWeight.w400,
+                    color: Colors.white,
+                    letterSpacing: 1.2,
+                    shadows: [
+                      Shadow(
+                        blurRadius: 10.0,
+                        color: Colors.white.withOpacity(0.5),
+                        offset: const Offset(2.0, 2.0),
+                      ),
+                    ],
+                    fontFamily: 'PlaywrightItaliaModerna', // Use a font that looks elegant
                   ),
                 ),
-                SizedBox(height: 16.h),
-                Center(
-                  child: Text(
-                    'Our Values define the relationship we aim to have with our partners and clients as well as our focus on the human development of our teams',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      fontSize: 10.sp,
-                      fontWeight: FontWeight.w400,
-                      color: Colors.white,
-                      letterSpacing: 1.2,
-                      shadows: [
-                        Shadow(
-                          blurRadius: 10.0,
-                          color: Colors.black.withOpacity(0.5),
-                          offset: const Offset(2.0, 2.0),
-                        ),
-                      ],
-                      fontFamily: 'PlaywrightItaliaModerna', // Use a font that looks elegant
-                    ),
+              ),
+              SizedBox(height: 16.h),
+              Center(
+                child: Text(
+                  'Our Values define the relationship we aim to have with our partners and clients as well as our focus on the human development of our teams',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontSize: 10.sp,
+                    fontWeight: FontWeight.w400,
+                    color: Colors.white,
+                    letterSpacing: 1.2,
+                    shadows: [
+                      Shadow(
+                        blurRadius: 10.0,
+                        color: Colors.black.withOpacity(0.5),
+                        offset: const Offset(2.0, 2.0),
+                      ),
+                    ],
+                    fontFamily: 'PlaywrightItaliaModerna', // Use a font that looks elegant
                   ),
                 ),
-                SizedBox(height: 24.h),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    AboutUsDetailsItemWidget(title: 'Excellence'),
-                    AboutUsDetailsItemWidget(title: 'Quality'),
-                    AboutUsDetailsItemWidget(title: 'Loyalty'),
-                    AboutUsDetailsItemWidget(title: 'Collaboration'),
-                  ],
-                ),
-                SizedBox(height: 12.h),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    AboutUsDetailsItemWidget(title: 'Reliability'),
-                    AboutUsDetailsItemWidget(title: 'Commitment'),
-                    AboutUsDetailsItemWidget(title: 'Safety'),
-                    AboutUsDetailsItemWidget(title: 'Integrity'),
-                  ],
-                ),
-                SizedBox(height: 12.h),
-                // Additional content can be added here
-              ],
-            ),
+              ),
+              SizedBox(height: 24.h),
+              const Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  AboutUsDetailsItemWidget(title: 'Excellence'),
+                  AboutUsDetailsItemWidget(title: 'Quality'),
+                  AboutUsDetailsItemWidget(title: 'Loyalty'),
+                  AboutUsDetailsItemWidget(title: 'Collaboration'),
+                ],
+              ),
+              SizedBox(height: 12.h),
+              const Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  AboutUsDetailsItemWidget(title: 'Reliability'),
+                  AboutUsDetailsItemWidget(title: 'Commitment'),
+                  AboutUsDetailsItemWidget(title: 'Safety'),
+                  AboutUsDetailsItemWidget(title: 'Integrity'),
+                ],
+              ),
+              SizedBox(height: 12.h),
+              // Additional content can be added here
+            ],
           ),
         ),
       ),
