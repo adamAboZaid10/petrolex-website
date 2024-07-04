@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "653303182678",
+    "project_id": "petrolaxweb",
+    "storage_bucket": "petrolaxweb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:653303182678:android:4d6c68a1191a39a7ffd2f7",
+        "android_client_info": {
+          "package_name": "com.example.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCq7p0TksmXnjDUXgN21anxYGfSgg8hg9M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

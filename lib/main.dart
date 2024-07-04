@@ -3,8 +3,12 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_web/core/utils/app_colors.dart';
 import 'package:flutter_web/features/home/presentation/views/screens/home_screen_mobile.dart';
 import 'package:flutter_web/features/home/presentation/views/screens/home_screen_web.dart';
-
-void main() {
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
+void main() async{
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(const MyApp());
 }
 

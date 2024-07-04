@@ -34,7 +34,7 @@ class CustomCarouselWidget extends StatelessWidget {
                 borderRadius: BorderRadius.all(
                   Radius.circular(5.0.r),
                 ),
-                child: Image.network(
+                child: Image.asset(
                   item,
                   width: 1000.0.sp,
                   height: 1000.0.sp,
@@ -46,6 +46,8 @@ class CustomCarouselWidget extends StatelessWidget {
     );
   }
 }
+
+
 class CustomCarouselMobileWidget extends StatelessWidget {
   const CustomCarouselMobileWidget({
     super.key,
@@ -64,7 +66,7 @@ class CustomCarouselMobileWidget extends StatelessWidget {
         height: 280.0.sp,
         enlargeCenterPage: true,
         autoPlay: true,
-        aspectRatio: 16 / 10,
+
         autoPlayCurve: Curves.fastOutSlowIn,
         enableInfiniteScroll: true,
         autoPlayAnimationDuration: const Duration(milliseconds: 800),
@@ -76,9 +78,8 @@ class CustomCarouselMobileWidget extends StatelessWidget {
               margin: EdgeInsets.all(5.0.sp),
               child: Image.asset(
                 item,
-                width: 4000.0.sp,
-                height: 4000.0.sp,
-                fit: BoxFit.cover,
+                width: 1000.0.sp,
+                height: 1000.0.sp,
               ),
             ),
           )
