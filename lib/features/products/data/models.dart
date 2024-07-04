@@ -19,7 +19,7 @@ class ProductDetails {
   String? desc;
   Array? points;
 
-  
+
   ProductDetails({
     this.name,
     this.desc,
@@ -28,7 +28,7 @@ class ProductDetails {
 
 
 
-  ProductDetails.fromJson(Map<String, dynamic> json) {
+  ProductDetails.fromJson(Map<dynamic, dynamic> json) {
     name = json['name'];
     desc = json['desc'];
     points = json['points'];

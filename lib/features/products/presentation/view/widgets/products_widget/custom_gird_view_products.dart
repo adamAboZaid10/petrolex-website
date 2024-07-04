@@ -1,12 +1,29 @@
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_web/features/products/data/models.dart';
 import 'package:flutter_web/features/products/presentation/view/screeens/base_products_details.dart';
 import 'package:flutter_web/features/products/presentation/view/screeens/products_details_screen.dart';
 
-class CustomGirdViewProducts extends StatelessWidget {
+class CustomGirdViewProducts extends StatefulWidget {
   const CustomGirdViewProducts({super.key});
 
+  @override
+  State<CustomGirdViewProducts> createState() => _CustomGirdViewProductsState();
+}
+
+class _CustomGirdViewProductsState extends State<CustomGirdViewProducts> {
+
+ List<Product> products = [];
+DatabaseReference productsRef = FirebaseDatabase.instance.ref().child('products');
+@override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+
+    retrieveProducts();
+  }
   @override
   Widget build(BuildContext context) {
     return GridView.count(
@@ -31,7 +48,24 @@ class CustomGirdViewProducts extends StatelessWidget {
       }),
     );
   }
+
+  void retrieveProducts() {
+
+ productsRef.onChildAdded.listen((data) {
+ ProductDetails productDetails = ProductDetails.fromJson(data.snapshot.value as Map);
+ Product product = Product(key: data.snapshot.key, productDetails: productDetails);
+ products.add(product);
+ setState(() {});
+
+ }
+
+ );
+
+
 }
+}
+
+
 
 class CustomGirdViewMobileProducts extends StatelessWidget {
   const CustomGirdViewMobileProducts({super.key});
