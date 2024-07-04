@@ -31,7 +31,6 @@ class ProductsDetails extends StatelessWidget {
          SizedBox(height: 20.h,),
          Container(
            padding: EdgeInsets.all(20.sp),
-           height: 200.sp,
            decoration: BoxDecoration(
              color: AppColors.darkGreenColor,
              borderRadius: BorderRadius.circular(10.r),
@@ -43,7 +42,6 @@ class ProductsDetails extends StatelessWidget {
                  offset: const Offset(0, 3), // changes position of shadow
                ),
              ],
-      
            ),
            child: Row(
              children: [
