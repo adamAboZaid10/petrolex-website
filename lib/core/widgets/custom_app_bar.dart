@@ -20,16 +20,13 @@ class CustomAppBar extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            Expanded(
-              child: Text(
-                'Petrolex Oil',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 20.sp,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
+            Image.asset(
+              'assets/image/company_logo.png',
+              fit: BoxFit.contain,
+              height: 80.sp,
+              width: 80.sp,
             ),
+            Spacer(),
             CustomButtonAppBarWidget(
               onTap: () {
                 Navigator.push(
@@ -88,22 +85,19 @@ class CustomAppBarMobile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: AppColors.darkGreenColor,
-      height: 150.sp,
+      height: 120.sp,
       child: Padding(
         padding: EdgeInsets.symmetric(horizontal: 20.0.sp),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            Expanded(
-              child: Text(
-                'Petrolex Oil',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 40.sp,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
+            Image.asset(
+              'assets/image/company_logo.png',
+              fit: BoxFit.contain,
+              height: 160.sp,
+              width: 160.sp,
             ),
+            Spacer(),
             CustomButtonAppBarWidget(
               onTap: () {
                 Navigator.push(
