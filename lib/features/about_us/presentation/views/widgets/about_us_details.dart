@@ -226,7 +226,7 @@ class AboutUsDetailsItemWidget extends StatelessWidget {
     required this.title,
     this.heightContainer = 20,
     this.widthContainer = 90,
-    this.fontSize = 14,
+    this.fontSize = 10,
   });
 
   final String title;

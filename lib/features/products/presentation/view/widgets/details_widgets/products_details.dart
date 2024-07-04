@@ -43,7 +43,7 @@ class ProductsDetails extends StatelessWidget {
                  offset: const Offset(0, 3), // changes position of shadow
                ),
              ],
-
+      
            ),
            child: Row(
              children: [

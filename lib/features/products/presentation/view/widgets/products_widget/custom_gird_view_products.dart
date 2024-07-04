@@ -1,6 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_web/features/products/presentation/view/screeens/base_products_details.dart';
 import 'package:flutter_web/features/products/presentation/view/screeens/products_details_screen.dart';
 
 class CustomGirdViewProducts extends StatelessWidget {
@@ -22,7 +23,7 @@ class CustomGirdViewProducts extends StatelessWidget {
            Navigator.push(
              context,
              MaterialPageRoute(
-               builder: (context) => const ProductsDetailsScreen(),
+               builder: (context) => const BaseProductsDetails(),
              ),
            );
           },
@@ -57,7 +58,7 @@ class CustomGirdViewMobileProducts extends StatelessWidget {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => const ProductsDetailsMobileScreen(),
+                builder: (context) => const BaseProductsDetails(),
               ),
             );
           },
