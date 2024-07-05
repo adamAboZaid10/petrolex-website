@@ -17,7 +17,7 @@ class HomeScreenMobileBody extends StatelessWidget {
   Widget build(BuildContext context) {
     final List<String> imgList = [
       'assets/image/slider1.jpg',
-      'assets/image/slider2.jpg',
+
       'assets/image/slider3.jpg',
     ];
     return BlocBuilder<HomeBloc, HomeState>(

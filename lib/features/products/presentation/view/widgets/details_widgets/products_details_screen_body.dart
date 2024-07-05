@@ -9,15 +9,15 @@ import '../../../../../../core/widgets/footer.dart';
 
 
 class ProductsDetailsScreenBody extends StatelessWidget {
-  const ProductsDetailsScreenBody({super.key});
-
+  const ProductsDetailsScreenBody({super.key, required this.id});
+final int id;
   @override
   Widget build(BuildContext context) {
     return  Column(
       children: [
         const CustomTopImageProductsScreen(),
         SizedBox(height: 20.h,),
-       const ProductsDetails(),
+        ProductsDetails(id: id,),
         FooterWidget(),
       ],
     );
@@ -26,8 +26,8 @@ class ProductsDetailsScreenBody extends StatelessWidget {
 
 
 class ProductsDetailsMobileScreenBody extends StatelessWidget {
-  const ProductsDetailsMobileScreenBody({super.key});
-
+  const ProductsDetailsMobileScreenBody({super.key, required this.id});
+final int id;
   @override
   Widget build(BuildContext context) {
     return  Container(
@@ -36,7 +36,7 @@ class ProductsDetailsMobileScreenBody extends StatelessWidget {
         children: [
           const CustomTopImageMobileProductsScreen(),
           SizedBox(height: 20.h,),
-         const ProductsMobileDetails(),
+          ProductsMobileDetails(id: id,),
           FooterMobileWidget(),
         ],
       ),

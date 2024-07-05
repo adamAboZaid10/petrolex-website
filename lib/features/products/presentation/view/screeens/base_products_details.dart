@@ -3,8 +3,8 @@ import 'package:flutter_web/features/contact_us/presentation/views/screens/conta
 import 'package:flutter_web/features/products/presentation/view/screeens/products_details_screen.dart';
 
 class BaseProductsDetails extends StatelessWidget {
-  const BaseProductsDetails({super.key});
-
+  const BaseProductsDetails({super.key, required this.id});
+final int id;
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(
@@ -14,14 +14,14 @@ class BaseProductsDetails extends StatelessWidget {
             data: MediaQuery.of(context).copyWith(
               textScaleFactor: 1.25,
             ),
-            child: const ProductsDetailsScreen(),
+            child:  ProductsDetailsScreen(id: id,),
           );
         } else {
           return MediaQuery(
             data: MediaQuery.of(context).copyWith(
               textScaleFactor: 0.6,
             ),
-            child: const ProductsDetailsMobileScreen(),
+            child:  ProductsDetailsMobileScreen(id:id,),
           );
         }
       },

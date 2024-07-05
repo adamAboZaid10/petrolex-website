@@ -43,7 +43,14 @@ dependencies:
   lottie: ^3.1.2
   cached_network_image: ^3.3.1
   firebase_core: ^3.1.1
+
   cloud_firestore: ^5.0.2
+
+  firebase_database: ^11.0.2
+  get_it: ^7.7.0
+  either_dart: ^1.0.0
+  shimmer: ^3.0.0
+
  
 
 dev_dependencies:
