@@ -9,7 +9,7 @@ class CustomDefineAboutCompanyWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Padding(
+    return Padding(
       padding: EdgeInsets.symmetric(horizontal: 20.0.w),
       child: Container(
         decoration: BoxDecoration(
@@ -17,10 +17,10 @@ class CustomDefineAboutCompanyWidget extends StatelessWidget {
           borderRadius: BorderRadius.circular(5.0.sp),
         ),
         child: Padding(
-          padding: EdgeInsets.all( 20.0.sp),
+          padding: EdgeInsets.all(20.0.sp),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center ,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Expanded(
                 child: Column(
@@ -40,24 +40,32 @@ class CustomDefineAboutCompanyWidget extends StatelessWidget {
                       style: TextStyle(
                         fontSize: 12.sp,
                         fontWeight: FontWeight.w400,
-                        color:  Colors.white,
+                        color: Colors.white,
                       ),
                     ),
                   ],
                 ),
               ),
-              SizedBox(width: 30.w,),
+              SizedBox(
+                width: 30.w,
+              ),
               Container(
                 height: 200.sp,
                 width: 200.sp,
                 clipBehavior: Clip.antiAliasWithSaveLayer,
-                decoration:  BoxDecoration(
+                decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(15.r),
-
                 ),
-                child: Lottie.asset('assets/lotttie/info.json',),
+                child: IgnorePointer(
+                  child: Lottie.asset(
+                    'assets/lotttie/info.json',
+                    fit: BoxFit.cover,
+                  ),
+                ),
               ),
-              SizedBox(width: 30.w,),
+              SizedBox(
+                width: 30.w,
+              ),
             ],
           ),
         ),
@@ -66,13 +74,12 @@ class CustomDefineAboutCompanyWidget extends StatelessWidget {
   }
 }
 
-
 class CustomDefineAboutCompanyMobileWidget extends StatelessWidget {
   const CustomDefineAboutCompanyMobileWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return  Padding(
+    return Padding(
       padding: EdgeInsets.symmetric(horizontal: 20.0.w),
       child: Container(
         decoration: BoxDecoration(
@@ -80,10 +87,10 @@ class CustomDefineAboutCompanyMobileWidget extends StatelessWidget {
           borderRadius: BorderRadius.circular(5.0.sp),
         ),
         child: Padding(
-          padding: EdgeInsets.all( 20.0.sp),
+          padding: EdgeInsets.all(20.0.sp),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center ,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Expanded(
                 child: Column(
@@ -103,24 +110,31 @@ class CustomDefineAboutCompanyMobileWidget extends StatelessWidget {
                       style: TextStyle(
                         fontSize: 20.sp,
                         fontWeight: FontWeight.w400,
-                        color:  Colors.white,
+                        color: Colors.white,
                       ),
                     ),
                   ],
                 ),
               ),
-              SizedBox(width: 10.w,),
+              SizedBox(
+                width: 10.w,
+              ),
               Container(
                 height: 200.sp,
                 width: 200.sp,
                 clipBehavior: Clip.antiAliasWithSaveLayer,
-                decoration:  BoxDecoration(
+                decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(15.r),
-
                 ),
-                child: Lottie.asset('assets/lotttie/info.json',),
+                child: IgnorePointer(
+                  child: Lottie.asset(
+                    'assets/lotttie/info.json',
+                  ),
+                ),
               ),
-              SizedBox(width: 30.w,),
+              SizedBox(
+                width: 30.w,
+              ),
             ],
           ),
         ),

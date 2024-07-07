@@ -15,6 +15,7 @@ class CustomTextField extends StatelessWidget {
   final double labelFontSize;
   final double astricFontSize;
   final double textFontSize;
+  final FocusNode focusNode;
 
   const CustomTextField({
     super.key,
@@ -31,6 +32,7 @@ class CustomTextField extends StatelessWidget {
     this.labelFontSize = 9,
     this.astricFontSize = 9,
     this.textFontSize = 9,
+    required this.focusNode,
 
   });
 
@@ -66,6 +68,7 @@ class CustomTextField extends StatelessWidget {
         SizedBox(
           height: height.sp,
           child: TextFormField(
+            focusNode: focusNode,
             style: TextStyle(
               fontSize: textFontSize.sp,
               fontWeight: FontWeight.bold,

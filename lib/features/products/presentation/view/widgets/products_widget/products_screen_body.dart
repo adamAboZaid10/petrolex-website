@@ -12,7 +12,7 @@ class ProductsScreenBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return  Column(
       children: [
-       const CustomTopImageProductsScreen(),
+       // const CustomTopImageProductsScreen(),
         SizedBox(height: 20.h,),
         const CustomGirdViewProducts(),
         FooterWidget(),
@@ -28,7 +28,7 @@ class ProductsMobileScreenBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return  Column(
       children: [
-       const CustomTopImageMobileProductsScreen(),
+       // const CustomTopImageMobileProductsScreen(),
         SizedBox(height: 20.h,),
         const CustomGirdViewMobileProducts(),
         FooterMobileWidget(),

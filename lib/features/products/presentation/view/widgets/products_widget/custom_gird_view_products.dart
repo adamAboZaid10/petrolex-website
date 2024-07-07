@@ -47,12 +47,14 @@ class CustomGirdViewProducts extends StatelessWidget {
             shrinkWrap: true,
             mainAxisSpacing: 2.sp,
             crossAxisSpacing: 2.sp,
-            children: List.generate(6, (index) {
+            children: List.generate(state.products.length, (index) {
               return CustomGridViewProductsItem(
-                imgPath:
-                    'https://hips.hearstapps.com/hmg-prod/images/lionel-messi-celebrates-after-their-sides-third-goal-by-news-photo-1686170172.jpg?crop=0.66653xw:1xh;center,top&resize=640:*',
+                imgPath:state.products[index].img!,
+                    // 'https://hips.hearstapps.com/hmg-prod/images/lionel-messi-celebrates-after-their-sides-third-goal-by-news-photo-1686170172.jpg?crop=0.66653xw:1xh;center,top&resize=640:*',
                 nameProducts: state.products[index].name!,
                 onTap: () {
+
+                  // print(state.products[index].img);
                   Navigator.push(
                     context,
                     MaterialPageRoute(
@@ -127,13 +129,13 @@ class CustomGirdViewMobileProducts extends StatelessWidget {
             mainAxisSpacing: 2.sp,
             crossAxisSpacing: 2.sp,
             childAspectRatio: 1 / 1.5,
-            children: List.generate(6, (index) {
+            children: List.generate(state.products.length, (index) {
               return CustomGridViewProductsItem(
                 imgHeight: 200,
                 imgWidth: 200,
                 fontSize: 25,
-                imgPath:
-                'https://hips.hearstapps.com/hmg-prod/images/lionel-messi-celebrates-after-their-sides-third-goal-by-news-photo-1686170172.jpg?crop=0.66653xw:1xh;center,top&resize=640:*',
+                imgPath:state.products[index].img!,
+                // 'https://hips.hearstapps.com/hmg-prod/images/lionel-messi-celebrates-after-their-sides-third-goal-by-news-photo-1686170172.jpg?crop=0.66653xw:1xh;center,top&resize=640:*',
                 nameProducts: state.products[index].name!,
                 onTap: () {
                   Navigator.push(
@@ -150,7 +152,7 @@ class CustomGirdViewMobileProducts extends StatelessWidget {
           return Text(
             'Error',
             style: TextStyle(
-              color: Colors.red,
+              color: Colors.white,
               fontSize: 20.sp,
             ),
           );
@@ -195,7 +197,7 @@ class CustomGridViewProductsItem extends StatelessWidget {
               placeholder: (context, url) => const Center(
                 child: CircularProgressIndicator(),
               ),
-              errorWidget: (context, url, error) => const Icon(Icons.error),
+
             ),
           ),
         ),

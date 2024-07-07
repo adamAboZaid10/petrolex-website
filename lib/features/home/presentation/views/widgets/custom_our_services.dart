@@ -33,7 +33,7 @@ class CustomOurServices extends StatelessWidget {
                 height: 10.h,
               ),
               Text(
-                'A dynamic and growing company. BBV1 Oil Fields Services and relies on decades of experience from its Diverse and large workforce.BBV1 Oil Fields and services are Focused on serving on OIL & GAS industry by providing services such as: ',
+                'A dynamic and growing company. Petrolex Oil Fields Services and relies on decades of experience from its Diverse and large workforce.Petrolex Oil Fields and services are Focused on serving on OIL & GAS industry by providing services such as: ',
                 style: TextStyle(
                   fontSize: 12.sp,
                   fontWeight: FontWeight.w400,

@@ -11,11 +11,4 @@ class GetProductsEvent extends ProductsEvent {
   List<Object> get props => [];
 }
 
-class GetProductDetailsEvent extends ProductsEvent {
-  final String id;
 
-  const GetProductDetailsEvent(this.id);
-
-  @override
-  List<Object> get props => [];
-}

@@ -22,15 +22,4 @@ class ProductsRepository extends BaseProductRepository {
     }
   }
 
-  @override
-  Future<Either<Failure, ProductDetails>> getProductDetails(String id) async{
-    final result = await baseProductsRemoteDataSource.getProductDetails(id);
-    try {
-      return Right(result);
-    } on Failure catch (failure) {
-      return Left(
-        failure,
-      );
-    }
-  }
 }

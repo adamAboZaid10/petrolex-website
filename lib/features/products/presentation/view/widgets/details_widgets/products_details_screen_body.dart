@@ -15,7 +15,7 @@ final int id;
   Widget build(BuildContext context) {
     return  Column(
       children: [
-        const CustomTopImageProductsScreen(),
+        // const CustomTopImageProductsScreen(),
         SizedBox(height: 20.h,),
         ProductsDetails(id: id,),
         FooterWidget(),
@@ -34,7 +34,7 @@ final int id;
       color: AppColors.backgroundColor,
       child: Column(
         children: [
-          const CustomTopImageMobileProductsScreen(),
+          // const CustomTopImageMobileProductsScreen(),
           SizedBox(height: 20.h,),
           ProductsMobileDetails(id: id,),
           FooterMobileWidget(),

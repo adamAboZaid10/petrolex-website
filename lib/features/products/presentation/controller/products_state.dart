@@ -5,17 +5,11 @@ class ProductsState extends Equatable {
   final List<ProductDetails> products;
   final String failure;
 
-  final ApiStatus getProductDetailsStatus;
-  final ProductDetails productDetails;
-  final String failureProductDetails;
 
   const ProductsState({
     required this.getProductsStatus,
     required this.products,
     required this.failure,
-    required this.getProductDetailsStatus,
-    required this.productDetails,
-    required this.failureProductDetails,
   });
 
   factory ProductsState.init() {
@@ -23,9 +17,6 @@ class ProductsState extends Equatable {
       getProductsStatus: ApiStatus.none,
       products: [],
       failure: '',
-      getProductDetailsStatus: ApiStatus.none,
-      productDetails: ProductDetails(),
-      failureProductDetails: '',
     );
   }
 
@@ -41,11 +32,6 @@ class ProductsState extends Equatable {
       getProductsStatus: getProductsStatus ?? this.getProductsStatus,
       products: products ?? this.products,
       failure: failure ?? this.failure,
-      getProductDetailsStatus:
-          getProductDetailsStatus ?? this.getProductDetailsStatus,
-      productDetails: productDetails ?? this.productDetails,
-      failureProductDetails:
-          failureProductDetails ?? this.failureProductDetails,
     );
   }
 
@@ -54,8 +40,5 @@ class ProductsState extends Equatable {
         getProductsStatus,
         products,
         failure,
-        getProductDetailsStatus,
-        productDetails,
-        failureProductDetails,
       ];
 }

@@ -4,7 +4,6 @@ import '../models/products_model.dart';
 
 abstract class BaseProductsRemoteDataSource {
   Future<List<ProductDetails>> getProducts();
-  Future<ProductDetails> getProductDetails(String id);
 }
 
 
@@ -33,16 +32,5 @@ class ProductsRemoteDataSource implements BaseProductsRemoteDataSource {
     }
   }
 
-  @override
-  Future<ProductDetails> getProductDetails(String id) async{
-    try {
-      final snapshot = await fireStore.collection('product').doc(id).get();
-        final data = snapshot.data();
-        return ProductDetails.fromJson(Map<String, dynamic>.from(data!));
-
-    } catch (e) {
-      throw Exception('Error fetching products: $e');
-    }
-  }
 }
 

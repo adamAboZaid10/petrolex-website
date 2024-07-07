@@ -23,6 +23,7 @@ class CustomCarouselWidget extends StatelessWidget {
         aspectRatio: 16 / 8,
         autoPlayCurve: Curves.fastOutSlowIn,
         enableInfiniteScroll: true,
+        autoPlayInterval: const Duration(seconds: 20),
         autoPlayAnimationDuration: const Duration(milliseconds: 800),
         onPageChanged: onPageChanged,
       ),
@@ -69,6 +70,7 @@ class CustomCarouselMobileWidget extends StatelessWidget {
 
         autoPlayCurve: Curves.fastOutSlowIn,
         enableInfiniteScroll: true,
+        autoPlayInterval: const Duration(seconds: 20),
         autoPlayAnimationDuration: const Duration(milliseconds: 800),
         onPageChanged: onPageChanged,
       ),
