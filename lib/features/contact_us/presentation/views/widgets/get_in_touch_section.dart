@@ -47,7 +47,7 @@ class GetInTouchMobileSection extends StatelessWidget {
               fontSize: 20,
             ),
             SizedBox(height: 10.0.h),
-            const ContactUsMobileForm(),
+             ContactUsMobileForm(),
             SizedBox(height: 10.h,),
           ],
         ),

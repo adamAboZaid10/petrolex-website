@@ -141,8 +141,8 @@ class ContactUsForm extends StatelessWidget {
 }
 
 class ContactUsMobileForm extends StatelessWidget {
-  const ContactUsMobileForm({super.key});
-
+   ContactUsMobileForm({super.key});
+final GlobalKey<FormState> formKey = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -155,7 +155,7 @@ class ContactUsMobileForm extends StatelessWidget {
         child: Padding(
           padding: EdgeInsets.all(24.0.sp),
           child: Form(
-            key: ContactUsData.formKey,
+            key:formKey,
             child: Column(
               children: [
                 CustomTextField(
