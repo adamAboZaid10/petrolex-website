@@ -48,7 +48,6 @@ class CustomCarouselWidget extends StatelessWidget {
   }
 }
 
-
 class CustomCarouselMobileWidget extends StatelessWidget {
   const CustomCarouselMobileWidget({
     super.key,
@@ -67,7 +66,6 @@ class CustomCarouselMobileWidget extends StatelessWidget {
         height: 280.0.sp,
         enlargeCenterPage: true,
         autoPlay: true,
-
         autoPlayCurve: Curves.fastOutSlowIn,
         enableInfiniteScroll: true,
         autoPlayInterval: const Duration(seconds: 20),

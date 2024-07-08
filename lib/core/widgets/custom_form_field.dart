@@ -16,6 +16,8 @@ class CustomTextField extends StatelessWidget {
   final double astricFontSize;
   final double textFontSize;
   final FocusNode focusNode;
+  final double maxWidth;
+  final double errorFontSize;
 
   const CustomTextField({
     super.key,
@@ -33,11 +35,22 @@ class CustomTextField extends StatelessWidget {
     this.astricFontSize = 9,
     this.textFontSize = 9,
     required this.focusNode,
-
+    this.maxWidth = 300,
+    this.errorFontSize = 10,
   });
 
   @override
   Widget build(BuildContext context) {
+    OutlineInputBorder borderStyle(Color borderColor) {
+      return OutlineInputBorder(
+        borderRadius: BorderRadius.circular(5.r),
+        borderSide: BorderSide(
+          color: borderColor,
+          width: 2,
+        ),
+      );
+    }
+
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -65,8 +78,10 @@ class CustomTextField extends StatelessWidget {
           ],
         ),
         SizedBox(height: 5.sp),
-        SizedBox(
-          height: height.sp,
+        Container(
+          constraints: BoxConstraints(
+            maxWidth: maxWidth.sp,
+          ),
           child: TextFormField(
             focusNode: focusNode,
             style: TextStyle(
@@ -76,14 +91,20 @@ class CustomTextField extends StatelessWidget {
             ),
             decoration: InputDecoration(
               hintText: hintText,
-              border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(5.r),
-              ),
               hintStyle: TextStyle(
                 fontSize: textFontSize.sp,
                 fontWeight: FontWeight.bold,
                 color: hintColor,
               ),
+              errorStyle: TextStyle(
+                fontSize: errorFontSize.sp,
+                color: Colors.red.shade900,
+              ),
+              border: borderStyle(Colors.grey),
+              focusedBorder: borderStyle(Colors.grey),
+              errorBorder: borderStyle(Colors.red.shade900),
+              focusedErrorBorder: borderStyle(Colors.red.shade900),
+              contentPadding: EdgeInsets.symmetric(horizontal: 10.sp, vertical: 10.sp),
             ),
             controller: controller,
             maxLines: maxLines,
@@ -95,4 +116,3 @@ class CustomTextField extends StatelessWidget {
     );
   }
 }
-

@@ -173,14 +173,55 @@ class ProductsDetails extends StatelessWidget {
                             SizedBox(
                               height: 30.h,
                             ),
-                            Text(
-                              '${state.products[id].points![0]} \n ${state.products[id].points![1]}',
-                              //. \nHigh effective control over soot, wear, rust corrosion. \nA high level of detergency and disperancy ensure a clean engine. \n  Good control of oil consumption',
-                              style: TextStyle(
-                                fontSize: 11.sp,
-                                color: Colors.white,
-                              ),
-                            ),
+                            state.products[id].points!.length == 1
+                                ? Text(
+                                    '1: ${state.products[id].points![0]} .',
+                                    style: TextStyle(
+                                      fontSize: 11.sp,
+                                      color: Colors.white,
+                                    ),
+                                  )
+                                : state.products[id].points!.length == 2
+                                    ? Text(
+                                        '1: ${state.products[id].points![0]} .\n2: ${state.products[id].points![1]}.',
+                                        style: TextStyle(
+                                          fontSize: 11.sp,
+                                          color: Colors.white,
+                                        ),
+                                      )
+                                    : state.products[id].points!.length == 3
+                                        ? Text(
+                                            '1: ${state.products[id].points![0]} .\n2: ${state.products[id].points![1]} .\n3: ${state.products[id].points![2]}.',
+                                            style: TextStyle(
+                                              fontSize: 11.sp,
+                                              color: Colors.white,
+                                            ),
+                                          )
+                                        : state.products[id].points!.length == 4
+                                            ? Text(
+                                                '1: ${state.products[id].points![0]} .\n2: ${state.products[id].points![1]} .\n3: ${state.products[id].points![2]} .\n4: ${state.products[id].points![3]} .',
+                                                style: TextStyle(
+                                                  fontSize: 11.sp,
+                                                  color: Colors.white,
+                                                ),
+                                              )
+                                            : state.products[id].points!
+                                                        .length ==
+                                                    5
+                                                ? Text(
+                                                    '1: ${state.products[id].points![0]} .\n2: ${state.products[id].points![1]} .\n3: ${state.products[id].points![2]} .\n4: ${state.products[id].points![3]} .\n5: ${state.products[id].points![4]} .',
+                                                    style: TextStyle(
+                                                      fontSize: 11.sp,
+                                                      color: Colors.white,
+                                                    ),
+                                                  )
+                                                : Text(
+                                                    '1: ${state.products[id].points![0]} .\n2: ${state.products[id].points![1]} .\n3: ${state.products[id].points![2]} .\n4: ${state.products[id].points![3]} .\n5: ${state.products[id].points![4]} .\n6: ${state.products[id].points![5]}.',
+                                                    style: TextStyle(
+                                                      fontSize: 11.sp,
+                                                      color: Colors.white,
+                                                    ),
+                                                  ),
                           ],
                         ),
                       ),
@@ -191,8 +232,7 @@ class ProductsDetails extends StatelessWidget {
                         width: 200.sp,
                         height: 200.sp,
                         child: CachedNetworkImage(
-                          imageUrl:
-                              'https://hips.hearstapps.com/hmg-prod/images/lionel-messi-celebrates-after-their-sides-third-goal-by-news-photo-1686170172.jpg?crop=0.66653xw:1xh;center,top&resize=640:*',
+                          imageUrl: state.products[id].img!,
                           placeholder: (context, url) => const Center(
                             child: CircularProgressIndicator(),
                           ),
@@ -391,14 +431,55 @@ class ProductsMobileDetails extends StatelessWidget {
                             SizedBox(
                               height: 10.h,
                             ),
-                            Text(
-                              '${state.products[id].points![0]} \n ${state.products[id].points![1]}',
-                              // 'Super Protection against oxidation, foaming, high-temperature deposits, and bore . \nHigh effective control over soot, wear, rust corrosion. \nA high level of detergency and disperancy ensure a clean engine. \n  Good control of oil consumption',
-                              style: TextStyle(
-                                fontSize: 20.sp,
-                                color: Colors.white,
-                              ),
-                            ),
+                            state.products[id].points!.length == 1
+                                ? Text(
+                                    '1: ${state.products[id].points![0]} .',
+                                    style: TextStyle(
+                                      fontSize: 30.sp,
+                                      color: Colors.white,
+                                    ),
+                                  )
+                                : state.products[id].points!.length == 2
+                                    ? Text(
+                                        '1: ${state.products[id].points![0]} .\n2: ${state.products[id].points![1]}.',
+                                        style: TextStyle(
+                                          fontSize: 30.sp,
+                                          color: Colors.white,
+                                        ),
+                                      )
+                                    : state.products[id].points!.length == 3
+                                        ? Text(
+                                            '1: ${state.products[id].points![0]} .\n2: ${state.products[id].points![1]} .\n3: ${state.products[id].points![2]}.',
+                                            style: TextStyle(
+                                              fontSize: 30.sp,
+                                              color: Colors.white,
+                                            ),
+                                          )
+                                        : state.products[id].points!.length == 4
+                                            ? Text(
+                                                '1: ${state.products[id].points![0]} .\n2: ${state.products[id].points![1]} .\n3: ${state.products[id].points![2]} .\n4: ${state.products[id].points![3]} .',
+                                                style: TextStyle(
+                                                  fontSize: 30.sp,
+                                                  color: Colors.white,
+                                                ),
+                                              )
+                                            : state.products[id].points!
+                                                        .length ==
+                                                    5
+                                                ? Text(
+                                                    '1: ${state.products[id].points![0]} .\n2: ${state.products[id].points![1]} .\n3: ${state.products[id].points![2]} .\n4: ${state.products[id].points![3]} .\n5: ${state.products[id].points![4]} .',
+                                                    style: TextStyle(
+                                                      fontSize: 30.sp,
+                                                      color: Colors.white,
+                                                    ),
+                                                  )
+                                                : Text(
+                                                    '1: ${state.products[id].points![0]} .\n2: ${state.products[id].points![1]} .\n3: ${state.products[id].points![2]} .\n4: ${state.products[id].points![3]} .\n5: ${state.products[id].points![4]} .\n6: ${state.products[id].points![5]}.',
+                                                    style: TextStyle(
+                                                      fontSize: 30.sp,
+                                                      color: Colors.white,
+                                                    ),
+                                                  ),
                           ],
                         ),
                       ),
@@ -410,8 +491,7 @@ class ProductsMobileDetails extends StatelessWidget {
                         height: 250.sp,
                         child: CachedNetworkImage(
                           fit: BoxFit.cover,
-                          imageUrl:
-                              'https://hips.hearstapps.com/hmg-prod/images/lionel-messi-celebrates-after-their-sides-third-goal-by-news-photo-1686170172.jpg?crop=0.66653xw:1xh;center,top&resize=640:*',
+                          imageUrl: state.products[id].img!,
                           placeholder: (context, url) => const Center(
                             child: CircularProgressIndicator(),
                           ),
@@ -433,7 +513,7 @@ class ProductsMobileDetails extends StatelessWidget {
             'Error',
             style: TextStyle(
               color: Colors.red,
-              fontSize: 20.sp,
+              fontSize: 30.sp,
             ),
           );
         }

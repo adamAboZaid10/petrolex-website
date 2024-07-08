@@ -6,7 +6,6 @@ abstract class BaseProductsRemoteDataSource {
   Future<List<ProductDetails>> getProducts();
 }
 
-
 class ProductsRemoteDataSource implements BaseProductsRemoteDataSource {
   final FirebaseFirestore fireStore;
 
@@ -17,12 +16,10 @@ class ProductsRemoteDataSource implements BaseProductsRemoteDataSource {
     try {
       final snapshot = await fireStore.collection('product').get();
       if (snapshot.docs.isNotEmpty) {
-        print (snapshot.docs);
         final products = snapshot.docs.map((doc) {
           final data = doc.data();
           return ProductDetails.fromJson(Map<String, dynamic>.from(data));
         }).toList();
-        print(products);
         return products;
       } else {
         return [];
@@ -31,6 +28,4 @@ class ProductsRemoteDataSource implements BaseProductsRemoteDataSource {
       throw Exception('Error fetching products: $e');
     }
   }
-
 }
-

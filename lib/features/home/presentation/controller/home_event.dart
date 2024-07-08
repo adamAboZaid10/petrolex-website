@@ -10,3 +10,9 @@ class CarouselSliderEvent extends HomeEvent {
   @override
   List<Object> get props => [];
 }
+
+class ChangeAppBarEvent extends HomeEvent {
+
+  @override
+  List<Object> get props => [];
+}

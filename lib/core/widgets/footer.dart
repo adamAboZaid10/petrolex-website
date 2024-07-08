@@ -21,7 +21,6 @@ class FooterWidget extends StatelessWidget {
     return BlocProvider(
       create: (context) => sl<ContactUsBloc>(),
       child: Container(
-        height: 350.sp,
         decoration: BoxDecoration(
           color: AppColors.blackColor,
           borderRadius: BorderRadius.only(
@@ -78,7 +77,9 @@ class FooterWidget extends StatelessWidget {
                             textColor: Colors.white,
                             labelColor: Colors.white,
                             validator: (value) {
-                              if (value == null || value.isEmpty) {
+                              if (value == null ||
+                                  value.isEmpty ||
+                                  !value.contains('@')) {
                                 return 'Please enter your Email';
                               }
                               return null;
@@ -194,8 +195,6 @@ class FooterWidget extends StatelessWidget {
   }
 }
 
-
-
 class FooterMobileWidget extends StatelessWidget {
   FooterMobileWidget({super.key});
 
@@ -231,108 +230,106 @@ class FooterMobileWidget extends StatelessWidget {
                   children: [
                     IgnorePointer(
                       child: Lottie.asset(
-
                         'assets/lotttie/submit.json',
                         animate: true,
-                        width: 140.sp,
-                        height: 140.sp,
+                        width: 180.sp,
+                        height: 180.sp,
                         fit: BoxFit.fill,
                       ),
                     ),
-                    SizedBox(height: 10.sp),
+                    SizedBox(height: 20.sp),
                     Column(
                       children: [
-                        SizedBox(
-                          width: double.infinity,
-                          child: CustomTextField(
-                            focusNode: ContactUsData.nameFocusNode,
-                            height: 70,
-                            hintColor: Colors.grey,
-                            textColor: Colors.white,
-                            labelColor: Colors.white,
-                            validator: (value) {
-                              if (value == null || value.isEmpty) {
-                                return 'Please enter your name';
-                              }
-                              return null;
-                            },
-                            controller: ContactUsData.nameController,
-                            label: 'Name',
-                            labelFontSize: 20,
-                            hintText: 'Enter your name',
-                            textFontSize: 25,
-                            astricFontSize: 15,
-                          ),
+                        CustomTextField(
+                          maxWidth: double.infinity,
+                          errorFontSize: 40.sp,
+
+                          focusNode: ContactUsData.nameFocusNode,
+                          height: 70,
+                          hintColor: Colors.grey,
+                          textColor: Colors.white,
+                          labelColor: Colors.white,
+                          validator: (value) {
+                            if (value == null || value.isEmpty) {
+                              return 'Please enter your name';
+                            }
+                            return null;
+                          },
+                          controller: ContactUsData.nameController,
+                          label: 'Name',
+                          labelFontSize: 30,
+                          hintText: 'Enter your name',
+                          textFontSize: 25,
+                          astricFontSize: 25,
                         ),
-                        SizedBox(height: 10.sp),
-                        SizedBox(
-                          width: double.infinity,
-                          child: CustomTextField(
-                            focusNode: ContactUsData.emailFocusNode,
-                            hintColor: Colors.grey,
-                            textColor: Colors.white,
-                            labelColor: Colors.white,
-                            validator: (value) {
-                              if (value == null || value.isEmpty) {
-                                return 'Please enter your Email';
-                              }
-                              return null;
-                            },
-                            controller: ContactUsData.emailController,
-                            label: 'Email',
-                            hintText: 'Enter your Email',
-                            labelFontSize: 20,
-                            height: 70,
-                            textFontSize: 25,
-                            astricFontSize: 15,
-                          ),
+                        SizedBox(height: 15.sp),
+                        CustomTextField(
+                          maxWidth: double.infinity,
+                          errorFontSize: 40.sp,
+                          focusNode: ContactUsData.emailFocusNode,
+                          hintColor: Colors.grey,
+                          textColor: Colors.white,
+                          labelColor: Colors.white,
+                          validator: (value) {
+                            if (value == null ||
+                                value.isEmpty ||
+                                !value.contains('@')) {
+                              return 'Please enter your Email';
+                            }
+                            return null;
+                          },
+                          controller: ContactUsData.emailController,
+                          label: 'Email',
+                          hintText: 'Enter your Email',
+                          labelFontSize: 30,
+                          height: 70,
+                          textFontSize: 25,
+                          astricFontSize: 25,
                         ),
-                        SizedBox(height: 10.sp),
-                        SizedBox(
-                          width: double.infinity,
-                          child: CustomTextField(
-                            focusNode: ContactUsData.numberFocusNode,
-                            hintColor: Colors.grey,
-                            textColor: Colors.white,
-                            labelColor: Colors.white,
-                            validator: (value) {
-                              if (value == null || value.isEmpty) {
-                                return 'Please enter your Number';
-                              }
-                              return null;
-                            },
-                            controller: ContactUsData.numberController,
-                            label: 'Number',
-                            hintText: 'Enter your Number',
-                            labelFontSize: 20,
-                            height: 70,
-                            textFontSize: 25,
-                            astricFontSize: 15,
-                          ),
+                        SizedBox(height: 15.sp),
+                        CustomTextField(
+                          maxWidth: double.infinity,
+                          errorFontSize: 40.sp,
+                          focusNode: ContactUsData.numberFocusNode,
+                          hintColor: Colors.grey,
+                          textColor: Colors.white,
+                          labelColor: Colors.white,
+                          validator: (value) {
+                            if (value == null || value.isEmpty) {
+                              return 'Please enter your Number';
+                            }
+                            return null;
+                          },
+                          controller: ContactUsData.numberController,
+                          label: 'Number',
+                          hintText: 'Enter your Number',
+                          labelFontSize: 30,
+                          height: 70,
+                          textFontSize: 25,
+                          astricFontSize: 25,
                         ),
-                        SizedBox(height: 10.sp),
-                        SizedBox(
-                          width: double.infinity,
-                          child: CustomTextField(
-                            focusNode: ContactUsData.messageFocusNode,
-                            labelFontSize: 20,
-                            height: 70,
-                            hintColor: Colors.grey,
-                            textColor: Colors.white,
-                            labelColor: Colors.white,
-                            validator: (value) {
-                              if (value == null || value.isEmpty) {
-                                return 'Please enter your Message';
-                              }
-                              return null;
-                            },
-                            controller: ContactUsData.messageController,
-                            label: 'Message',
-                            maxLines: 5,
-                            hintText: 'Enter your Message',
-                            textFontSize: 25,
-                            astricFontSize: 15,
-                          ),
+                        SizedBox(height: 15.sp),
+                        CustomTextField(
+                          maxWidth: double.infinity,
+                          errorFontSize: 40.sp,
+                          focusNode: ContactUsData.messageFocusNode,
+                          labelFontSize: 30,
+                          height: 70,
+                          hintColor: Colors.grey,
+                          textColor: Colors.white,
+                          labelColor: Colors.white,
+                          validator: (value) {
+                            if (value == null || value.isEmpty) {
+                              return 'Please enter your Message';
+                            }
+                            return null;
+                          },
+                          controller: ContactUsData.messageController,
+                          label: 'Message',
+                          maxLines: 5,
+                          hintText: 'Enter your Message',
+                          textFontSize: 25,
+                          astricFontSize: 25,
                         ),
                         SizedBox(height: 20.sp),
                         BlocConsumer<ContactUsBloc, ContactUsState>(
@@ -363,10 +360,6 @@ class FooterMobileWidget extends StatelessWidget {
                             return CustomDefaultButton(
                               backgroundColor: AppColors.lightBrownColor,
                               onTap: () {
-                                print(ContactUsData.nameController.text.trim());
-                                print(ContactUsData.numberController.text.trim());
-                                print(ContactUsData.emailController.text.trim());
-                                print(ContactUsData.messageController.text.trim());
                                 if (formKey.currentState!.validate()) {
                                   context
                                       .read<ContactUsBloc>()
@@ -374,7 +367,7 @@ class FooterMobileWidget extends StatelessWidget {
                                 }
                               },
                               text: 'Submit',
-                              fontSize: 30.sp,
+                              fontSize: 50.sp,
                               width: double.infinity,
                               height: 50,
                             );
@@ -392,5 +385,3 @@ class FooterMobileWidget extends StatelessWidget {
     );
   }
 }
-
-

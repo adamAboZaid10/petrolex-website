@@ -29,6 +29,7 @@ class ContactUsForm extends StatelessWidget {
             child: Column(
               children: [
                 CustomTextField(
+                  maxWidth: double.infinity,
                   focusNode: ContactUsData.nameFocusNode,
                   validator: (value) {
                     if (value == null || value.isEmpty) {
@@ -42,6 +43,7 @@ class ContactUsForm extends StatelessWidget {
                 ),
                 SizedBox(height: 10.h),
                 CustomTextField(
+                  maxWidth: double.infinity,
                   focusNode: ContactUsData.numberFocusNode,
                   validator: (value) {
                     if (value == null || value.isEmpty) {
@@ -55,10 +57,13 @@ class ContactUsForm extends StatelessWidget {
                 ),
                 SizedBox(height: 10.h),
                 CustomTextField(
+                  maxWidth: double.infinity,
                   focusNode: ContactUsData.emailFocusNode,
                   validator: (value) {
-                    if (value == null || value.isEmpty) {
-                      return 'Please enter your Email';
+                    if (value == null ||
+                        value.isEmpty ||
+                        !value.contains('@')) {
+                      return 'Please enter invalid Email';
                     }
                     return null;
                   },
@@ -68,6 +73,7 @@ class ContactUsForm extends StatelessWidget {
                 ),
                 SizedBox(height: 10.h),
                 CustomTextField(
+                  maxWidth: double.infinity,
                   focusNode: ContactUsData.messageFocusNode,
                   validator: (value) {
                     if (value == null || value.isEmpty) {
@@ -83,14 +89,13 @@ class ContactUsForm extends StatelessWidget {
                 SizedBox(height: 15.h),
                 BlocConsumer<ContactUsBloc, ContactUsState>(
                   listener: (context, state) {
-                    if(state.sendInfoStatus == ApiStatus.success){
+                    if (state.sendInfoStatus == ApiStatus.success) {
                       ContactUsData.nameController.clear();
                       ContactUsData.numberController.clear();
                       ContactUsData.emailController.clear();
                       ContactUsData.messageController.clear();
                       showToast(context, 'Message sent successfully');
                     }
-
                   },
                   builder: (context, state) {
                     if (state.sendInfoStatus == ApiStatus.loading) {
@@ -115,10 +120,10 @@ class ContactUsForm extends StatelessWidget {
                         print(ContactUsData.emailController.text.trim());
                         print(ContactUsData.messageController.text.trim());
                         if (ContactUsData.formKey.currentState!.validate()) {
-                          context.read<ContactUsBloc>().add(const SendInfoEvent());
-
+                          context
+                              .read<ContactUsBloc>()
+                              .add(const SendInfoEvent());
                         }
-
                       },
                       text: 'Send',
                       width: 95,
@@ -154,6 +159,8 @@ class ContactUsMobileForm extends StatelessWidget {
             child: Column(
               children: [
                 CustomTextField(
+                  maxWidth: double.infinity,
+                  errorFontSize: 30,
                   focusNode: ContactUsData.nameFocusNode,
                   validator: (value) {
                     if (value == null || value.isEmpty) {
@@ -164,13 +171,15 @@ class ContactUsMobileForm extends StatelessWidget {
                   controller: ContactUsData.nameController,
                   label: "Name",
                   hintText: "Enter your name",
-                  labelFontSize: 20,
+                  labelFontSize: 30,
                   height: 70,
                   textFontSize: 25,
-                  astricFontSize: 15,
+                  astricFontSize: 25,
                 ),
                 SizedBox(height: 10.h),
                 CustomTextField(
+                  maxWidth: double.infinity,
+                  errorFontSize: 30,
                   focusNode: ContactUsData.numberFocusNode,
                   validator: (value) {
                     if (value == null || value.isEmpty) {
@@ -181,16 +190,20 @@ class ContactUsMobileForm extends StatelessWidget {
                   controller: ContactUsData.numberController,
                   label: "Number",
                   hintText: "Enter your Number",
-                  labelFontSize: 20,
+                  labelFontSize: 30,
                   height: 70,
                   textFontSize: 25,
-                  astricFontSize: 15,
+                  astricFontSize: 25,
                 ),
                 SizedBox(height: 10.h),
                 CustomTextField(
+                  maxWidth: double.infinity,
+                  errorFontSize: 30,
                   focusNode: ContactUsData.emailFocusNode,
                   validator: (value) {
-                    if (value == null || value.isEmpty) {
+                    if (value == null ||
+                        value.isEmpty ||
+                        !value.contains('@')) {
                       return 'Please enter your Email';
                     }
                     return null;
@@ -198,13 +211,15 @@ class ContactUsMobileForm extends StatelessWidget {
                   controller: ContactUsData.emailController,
                   label: "Email",
                   hintText: "Enter your Email",
-                  labelFontSize: 20,
+                  labelFontSize: 30,
                   height: 70,
                   textFontSize: 25,
-                  astricFontSize: 15,
+                  astricFontSize: 25,
                 ),
                 SizedBox(height: 10.h),
                 CustomTextField(
+                  errorFontSize: 30,
+                  maxWidth: double.infinity,
                   focusNode: ContactUsData.messageFocusNode,
                   validator: (value) {
                     if (value == null || value.isEmpty) {
@@ -216,22 +231,21 @@ class ContactUsMobileForm extends StatelessWidget {
                   label: "Message",
                   hintText: "Enter your Message",
                   maxLines: 5,
-                  labelFontSize: 20,
+                  labelFontSize: 30,
                   height: 70,
                   textFontSize: 25,
-                  astricFontSize: 15,
+                  astricFontSize: 25,
                 ),
                 SizedBox(height: 15.h),
                 BlocConsumer<ContactUsBloc, ContactUsState>(
                   listener: (context, state) {
-                    if(state.sendInfoStatus == ApiStatus.success){
+                    if (state.sendInfoStatus == ApiStatus.success) {
                       ContactUsData.nameController.clear();
                       ContactUsData.numberController.clear();
                       ContactUsData.emailController.clear();
                       ContactUsData.messageController.clear();
                       showToast(context, 'Message sent successfully');
                     }
-
                   },
                   builder: (context, state) {
                     if (state.sendInfoStatus == ApiStatus.loading) {
@@ -244,25 +258,21 @@ class ContactUsMobileForm extends StatelessWidget {
                         state.sendInfoMessage,
                         style: TextStyle(
                           color: Colors.white,
-                          fontSize: 12.sp,
+                          fontSize: 50.sp,
                         ),
                       );
                     }
                     return CustomDefaultButton(
                       backgroundColor: AppColors.lightBrownColor,
                       onTap: () {
-                        print(ContactUsData.nameController.text.trim());
-                        print(ContactUsData.numberController.text.trim());
-                        print(ContactUsData.emailController.text.trim());
-                        print(ContactUsData.messageController.text.trim());
                         if (ContactUsData.formKey.currentState!.validate()) {
-                          context.read<ContactUsBloc>().add(const SendInfoEvent());
-
+                          context
+                              .read<ContactUsBloc>()
+                              .add(const SendInfoEvent());
                         }
-
                       },
                       text: 'Send',
-                      fontSize: 30.sp,
+                      fontSize: 50.sp,
                       width: double.infinity,
                       height: 50,
                     );

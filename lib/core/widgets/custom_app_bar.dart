@@ -79,7 +79,12 @@ class CustomAppBar extends StatelessWidget {
 }
 
 class CustomAppBarMobile extends StatelessWidget {
-  const CustomAppBarMobile({super.key});
+  const CustomAppBarMobile({
+    super.key,
+    required this.onTap,
+  });
+
+  final Function()? onTap;
 
   @override
   Widget build(BuildContext context) {
@@ -97,56 +102,95 @@ class CustomAppBarMobile extends StatelessWidget {
               height: 160.sp,
               width: 160.sp,
             ),
-            Spacer(),
-            CustomButtonAppBarWidget(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const BaseHome(),
-                  ),
-                );
-              },
-              title: 'Home',
-              fontSize: 20,
-            ),
-            CustomButtonAppBarWidget(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const BaseAboutUsScreen(),
-                  ),
-                );
-              },
-              title: 'About us',
-              fontSize: 20,
-            ),
-            CustomButtonAppBarWidget(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const BaseProducts(),
-                  ),
-                );
-              },
-              title: 'Products',
-              fontSize: 20,
-            ),
-            CustomButtonAppBarWidget(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const BaseContactUsScreen(),
-                  ),
-                );
-              },
-              title: 'Contact us',
-              fontSize: 20,
+            const Spacer(),
+            IconButton(
+              onPressed: onTap,
+              icon: Icon(
+                Icons.menu,
+                color: Colors.white,
+                size: 40.sp,
+              ),
             ),
           ],
+        ),
+      ),
+    );
+  }
+}
+
+
+class CustomItemMobileAppBar extends StatelessWidget {
+  const CustomItemMobileAppBar({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Positioned(
+      top: 60,
+      right: 10,
+      child: Container(
+        color: AppColors.darkGreenColor,
+        width: 200.sp,
+        child: Padding(
+          padding: EdgeInsets.symmetric(
+              horizontal: 20.0.sp, vertical: 10.0.sp),
+          child: Column(
+            crossAxisAlignment:
+            CrossAxisAlignment.start,
+            children: [
+              CustomButtonAppBarWidget(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) =>
+                      const BaseHome(),
+                    ),
+                  );
+                },
+                title: 'Home',
+                fontSize: 30,
+              ),
+              CustomButtonAppBarWidget(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) =>
+                      const BaseAboutUsScreen(),
+                    ),
+                  );
+                },
+                title: 'About us',
+                fontSize: 30,
+              ),
+              CustomButtonAppBarWidget(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) =>
+                      const BaseProducts(),
+                    ),
+                  );
+                },
+                title: 'Products',
+                fontSize: 30,
+              ),
+              CustomButtonAppBarWidget(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) =>
+                      const BaseContactUsScreen(),
+                    ),
+                  );
+                },
+                title: 'Contact us',
+                fontSize: 30,
+              ),
+            ],
+          ),
         ),
       ),
     );

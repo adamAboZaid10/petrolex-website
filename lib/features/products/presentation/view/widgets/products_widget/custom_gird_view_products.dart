@@ -32,7 +32,9 @@ class CustomGirdViewProducts extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => const BaseProductsDetails(id: 1,),
+                        builder: (context) => const BaseProductsDetails(
+                          id: 1,
+                        ),
                       ),
                     );
                   },
@@ -49,18 +51,16 @@ class CustomGirdViewProducts extends StatelessWidget {
             crossAxisSpacing: 2.sp,
             children: List.generate(state.products.length, (index) {
               return CustomGridViewProductsItem(
-                imgPath:state.products[index].img!,
-                    // 'https://hips.hearstapps.com/hmg-prod/images/lionel-messi-celebrates-after-their-sides-third-goal-by-news-photo-1686170172.jpg?crop=0.66653xw:1xh;center,top&resize=640:*',
+                imgPath: state.products[index].imgCover!,
                 nameProducts: state.products[index].name!,
                 onTap: () {
-
-                  // print(state.products[index].img);
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) =>  BaseProductsDetails(id: index,),
+                      builder: (context) => BaseProductsDetails(
+                        id: index,
+                      ),
                     ),
-
                   );
                 },
               );
@@ -91,7 +91,7 @@ class CustomGirdViewMobileProducts extends StatelessWidget {
           return Shimmer.fromColors(
             baseColor: Colors.grey,
             highlightColor: Colors.grey.shade300,
-            child:GridView.count(
+            child: GridView.count(
               scrollDirection: Axis.vertical,
               physics: const NeverScrollableScrollPhysics(),
               crossAxisCount: 3,
@@ -105,13 +105,15 @@ class CustomGirdViewMobileProducts extends StatelessWidget {
                   imgWidth: 200,
                   fontSize: 30,
                   imgPath:
-                  'https://hips.hearstapps.com/hmg-prod/images/lionel-messi-celebrates-after-their-sides-third-goal-by-news-photo-1686170172.jpg?crop=0.66653xw:1xh;center,top&resize=640:*',
+                      'https://hips.hearstapps.com/hmg-prod/images/lionel-messi-celebrates-after-their-sides-third-goal-by-news-photo-1686170172.jpg?crop=0.66653xw:1xh;center,top&resize=640:*',
                   nameProducts: 'Products name ',
                   onTap: () {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => const BaseProductsDetails(id: 1,),
+                        builder: (context) => const BaseProductsDetails(
+                          id: 1,
+                        ),
                       ),
                     );
                   },
@@ -130,21 +132,25 @@ class CustomGirdViewMobileProducts extends StatelessWidget {
             crossAxisSpacing: 2.sp,
             childAspectRatio: 1 / 1.5,
             children: List.generate(state.products.length, (index) {
-              return CustomGridViewProductsItem(
-                imgHeight: 200,
-                imgWidth: 200,
-                fontSize: 25,
-                imgPath:state.products[index].img!,
-                // 'https://hips.hearstapps.com/hmg-prod/images/lionel-messi-celebrates-after-their-sides-third-goal-by-news-photo-1686170172.jpg?crop=0.66653xw:1xh;center,top&resize=640:*',
-                nameProducts: state.products[index].name!,
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) =>  BaseProductsDetails(id: index,),
-                    ),
-                  );
-                },
+              return Padding(
+                padding:  EdgeInsets.symmetric(horizontal: 20.w),
+                child: CustomGridViewProductsItem(
+                  imgHeight: 200,
+                  imgWidth: 200,
+                  fontSize: 25,
+                  imgPath: state.products[index].imgCover!,
+                  nameProducts: state.products[index].name!,
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => BaseProductsDetails(
+                          id: index,
+                        ),
+                      ),
+                    );
+                  },
+                ),
               );
             }),
           );
@@ -197,7 +203,6 @@ class CustomGridViewProductsItem extends StatelessWidget {
               placeholder: (context, url) => const Center(
                 child: CircularProgressIndicator(),
               ),
-
             ),
           ),
         ),

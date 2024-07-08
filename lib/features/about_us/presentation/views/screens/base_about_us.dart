@@ -20,7 +20,7 @@ class BaseAboutUsScreen extends StatelessWidget {
             data: MediaQuery.of(context).copyWith(
               textScaler: const TextScaler.linear(0.6),
             ),
-            child: const AboutUsMobileScreen(),
+            child:  AboutUsMobileScreen(),
           );
         }
       },
