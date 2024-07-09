@@ -174,8 +174,8 @@ class CustomGridViewProductsItem extends StatelessWidget {
     required this.imgPath,
     required this.nameProducts,
     required this.onTap,
-    this.imgHeight = 100,
-    this.imgWidth = 100,
+    this.imgHeight = 150,
+    this.imgWidth = 150,
     this.fontSize = 10,
   });
 
@@ -194,9 +194,13 @@ class CustomGridViewProductsItem extends StatelessWidget {
       children: [
         InkWell(
           onTap: onTap,
-          child: SizedBox(
+          child: Container(
             width: imgWidth.sp,
             height: imgHeight.sp,
+            clipBehavior: Clip.antiAliasWithSaveLayer,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(10.sp),
+            ),
             child: CachedNetworkImage(
               imageUrl: imgPath,
               fit: BoxFit.cover,

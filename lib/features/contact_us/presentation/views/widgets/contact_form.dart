@@ -126,7 +126,7 @@ class ContactUsForm extends StatelessWidget {
                         }
                       },
                       text: 'Send',
-                      width: 95,
+                      width: double.infinity,
                       height: 35,
                     );
                   },
@@ -265,7 +265,7 @@ final GlobalKey<FormState> formKey = GlobalKey<FormState>();
                     return CustomDefaultButton(
                       backgroundColor: AppColors.lightBrownColor,
                       onTap: () {
-                        if (ContactUsData.formKey.currentState!.validate()) {
+                        if (formKey.currentState!.validate()) {
                           context
                               .read<ContactUsBloc>()
                               .add(const SendInfoEvent());

@@ -178,7 +178,7 @@ class FooterWidget extends StatelessWidget {
                               },
                               text: 'Submit',
                               width: 200,
-                              height: 20,
+                              height: 30,
                             );
                           },
                         ),

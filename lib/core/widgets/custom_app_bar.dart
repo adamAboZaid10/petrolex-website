@@ -24,9 +24,10 @@ class CustomAppBar extends StatelessWidget {
               'assets/image/company_logo.png',
               fit: BoxFit.contain,
               height: 80.sp,
+              color: Colors.white,
               width: 80.sp,
             ),
-            Spacer(),
+            const Spacer(),
             CustomButtonAppBarWidget(
               onTap: () {
                 Navigator.push(
@@ -96,11 +97,15 @@ class CustomAppBarMobile extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            Image.asset(
-              'assets/image/company_logo.png',
-              fit: BoxFit.contain,
-              height: 160.sp,
-              width: 160.sp,
+            Padding(
+              padding:  EdgeInsets.all(8.0.sp),
+              child: Image.asset(
+                'assets/image/company_logo.png',
+                fit: BoxFit.contain,
+                color: Colors.white,
+                height: 140.sp,
+                width: 140.sp,
+              ),
             ),
             const Spacer(),
             IconButton(
@@ -118,7 +123,6 @@ class CustomAppBarMobile extends StatelessWidget {
   }
 }
 
-
 class CustomItemMobileAppBar extends StatelessWidget {
   const CustomItemMobileAppBar({super.key});
 
@@ -131,19 +135,16 @@ class CustomItemMobileAppBar extends StatelessWidget {
         color: AppColors.darkGreenColor,
         width: 200.sp,
         child: Padding(
-          padding: EdgeInsets.symmetric(
-              horizontal: 20.0.sp, vertical: 10.0.sp),
+          padding: EdgeInsets.symmetric(horizontal: 20.0.sp, vertical: 10.0.sp),
           child: Column(
-            crossAxisAlignment:
-            CrossAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               CustomButtonAppBarWidget(
                 onTap: () {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) =>
-                      const BaseHome(),
+                      builder: (context) => const BaseHome(),
                     ),
                   );
                 },
@@ -155,8 +156,7 @@ class CustomItemMobileAppBar extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) =>
-                      const BaseAboutUsScreen(),
+                      builder: (context) => const BaseAboutUsScreen(),
                     ),
                   );
                 },
@@ -168,8 +168,7 @@ class CustomItemMobileAppBar extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) =>
-                      const BaseProducts(),
+                      builder: (context) => const BaseProducts(),
                     ),
                   );
                 },
@@ -181,8 +180,7 @@ class CustomItemMobileAppBar extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) =>
-                      const BaseContactUsScreen(),
+                      builder: (context) => const BaseContactUsScreen(),
                     ),
                   );
                 },
