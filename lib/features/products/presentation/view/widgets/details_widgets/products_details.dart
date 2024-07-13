@@ -30,7 +30,7 @@ class ProductsDetails extends StatelessWidget {
                     style: TextStyle(
                       fontSize: 20.sp,
                       fontWeight: FontWeight.bold,
-                      color: AppColors.lightBrownColor,
+                      color: Colors.white,
                     ),
                   ),
                   SizedBox(
@@ -125,7 +125,7 @@ class ProductsDetails extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 20.sp,
                     fontWeight: FontWeight.bold,
-                    color: AppColors.lightBrownColor,
+                    color: Colors.white,
                   ),
                 ),
                 SizedBox(
@@ -135,7 +135,7 @@ class ProductsDetails extends StatelessWidget {
                   state.products[id].desc!,
                   style: TextStyle(
                     fontSize: 11.sp,
-                    color: Colors.black,
+                    color: Colors.white,
                   ),
                 ),
                 SizedBox(
@@ -144,7 +144,7 @@ class ProductsDetails extends StatelessWidget {
                 Container(
                   padding: EdgeInsets.all(20.sp),
                   decoration: BoxDecoration(
-                    color: AppColors.darkGreenColor,
+                    color: Colors.black.withOpacity(0.6),
                     borderRadius: BorderRadius.circular(10.r),
                     boxShadow: [
                       BoxShadow(
@@ -382,7 +382,7 @@ class ProductsMobileDetails extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 40.sp,
                     fontWeight: FontWeight.bold,
-                    color: AppColors.lightBrownColor,
+                    color: Colors.white,
                   ),
                 ),
                 SizedBox(
@@ -392,7 +392,7 @@ class ProductsMobileDetails extends StatelessWidget {
                   state.products[id].desc!,
                   style: TextStyle(
                     fontSize: 30.sp,
-                    color: Colors.black,
+                    color: Colors.white,
                   ),
                 ),
                 SizedBox(
@@ -402,7 +402,7 @@ class ProductsMobileDetails extends StatelessWidget {
                   padding: EdgeInsets.all(20.sp),
                   height: 400.sp,
                   decoration: BoxDecoration(
-                    color: AppColors.darkGreenColor,
+                    color:Colors.black.withOpacity(0.6),
                     borderRadius: BorderRadius.circular(10.r),
                     boxShadow: [
                       BoxShadow(

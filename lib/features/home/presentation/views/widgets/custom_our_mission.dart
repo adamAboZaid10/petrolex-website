@@ -11,50 +11,59 @@ class CustomOurMission extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 20.0.sp),
-      child: Column(
-        children: [
-          Container(
-            width: 50.sp,
-            height: 50.sp,
-            color: Colors.white,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                SvgPicture.asset(
-                  "assets/svg/rocket.svg",
-                  fit: BoxFit.cover,
-                  alignment: Alignment.center,
-                  width: 30.sp,
-                  height: 30.sp,
-                  color: AppColors.blackColor,
+      child: Container(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(5.0.sp),
+          color: AppColors.darkGreenColor.withOpacity(0.5),
+        ),
+        child: Padding(
+          padding: EdgeInsets.all( 20.0.sp),
+          child: Column(
+            children: [
+              Container(
+                width: 50.sp,
+                height: 50.sp,
+                color: Colors.white,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    SvgPicture.asset(
+                      "assets/svg/rocket.svg",
+                      fit: BoxFit.cover,
+                      alignment: Alignment.center,
+                      width: 30.sp,
+                      height: 30.sp,
+                      color: AppColors.blackColor,
+                    ),
+                  ],
                 ),
-              ],
-            ),
+              ),
+              SizedBox(
+                height: 10.h,
+              ),
+              Text(
+                'Our Mission',
+                style: TextStyle(
+                  color: AppColors.lightBrownColor,
+                  fontSize: 20.sp,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              SizedBox(
+                height: 10.h,
+              ),
+              Text(
+                'To create, strengthen, and Expand our reach and our services by growing our network of partners with International Leading services Provider and reaching new and bigger markets regionally in the MENA region and Beyond.',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 12.sp,
+                  fontWeight: FontWeight.w400,
+                ),
+              ),
+            ],
           ),
-          SizedBox(
-            height: 10.h,
-          ),
-          Text(
-            'Our Mission',
-            style: TextStyle(
-              color: AppColors.lightBrownColor,
-              fontSize: 20.sp,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-          SizedBox(
-            height: 10.h,
-          ),
-          Text(
-            'To create, strengthen, and Expand our reach and our services by growing our network of partners with International Leading services Provider and reaching new and bigger markets regionally in the MENA region and Beyond.',
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 12.sp,
-              fontWeight: FontWeight.w400,
-            ),
-          ),
-        ],
+        ),
       ),
     );
   }
@@ -67,50 +76,59 @@ class CustomOurMissionMobile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 20.0.sp),
-      child: Column(
-        children: [
-          Container(
-            width: 100.sp,
-            height: 100.sp,
-            color: Colors.white,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                SvgPicture.asset(
-                  "assets/svg/rocket.svg",
-                  fit: BoxFit.cover,
-                  alignment: Alignment.center,
-                  width: 60.sp,
-                  height: 60.sp,
-                  color: AppColors.blackColor,
+      child: Container(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(5.0.sp),
+          color: AppColors.darkGreenColor.withOpacity(0.5),
+        ),
+        child: Padding(
+          padding: EdgeInsets.all( 20.0.sp),
+          child: Column(
+            children: [
+              Container(
+                width: 100.sp,
+                height: 100.sp,
+                color: Colors.white,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    SvgPicture.asset(
+                      "assets/svg/rocket.svg",
+                      fit: BoxFit.cover,
+                      alignment: Alignment.center,
+                      width: 60.sp,
+                      height: 60.sp,
+                      color: AppColors.blackColor,
+                    ),
+                  ],
                 ),
-              ],
-            ),
+              ),
+              SizedBox(
+                height: 10.h,
+              ),
+              Text(
+                'Our Mission',
+                style: TextStyle(
+                  color: AppColors.lightBrownColor,
+                  fontSize: 40.sp,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              SizedBox(
+                height: 10.h,
+              ),
+              Text(
+                'To create, strengthen, and Expand our reach and our services by growing our network of partners with International Leading services Provider and reaching new and bigger markets regionally in the MENA region and Beyond.',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 30.sp,
+                  fontWeight: FontWeight.w400,
+                ),
+              ),
+            ],
           ),
-          SizedBox(
-            height: 10.h,
-          ),
-          Text(
-            'Our Mission',
-            style: TextStyle(
-              color: AppColors.lightBrownColor,
-              fontSize: 40.sp,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-          SizedBox(
-            height: 10.h,
-          ),
-          Text(
-            'To create, strengthen, and Expand our reach and our services by growing our network of partners with International Leading services Provider and reaching new and bigger markets regionally in the MENA region and Beyond.',
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 30.sp,
-              fontWeight: FontWeight.w400,
-            ),
-          ),
-        ],
+        ),
       ),
     );
   }

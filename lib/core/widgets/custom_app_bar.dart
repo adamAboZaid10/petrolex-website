@@ -13,7 +13,7 @@ class CustomAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: AppColors.darkGreenColor,
+      color:Colors.black,
       height: 40.sp,
       child: Padding(
         padding: EdgeInsets.symmetric(horizontal: 20.0.sp),
@@ -23,9 +23,9 @@ class CustomAppBar extends StatelessWidget {
             Image.asset(
               'assets/image/company_logo.png',
               fit: BoxFit.contain,
-              height: 80.sp,
+              height: 60.sp,
               color: Colors.white,
-              width: 80.sp,
+              width: 60.sp,
             ),
             const Spacer(),
             CustomButtonAppBarWidget(
@@ -44,23 +44,24 @@ class CustomAppBar extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const BaseAboutUsScreen(),
-                  ),
-                );
-              },
-              title: 'About us',
-            ),
-            CustomButtonAppBarWidget(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
                     builder: (context) => const BaseProducts(),
                   ),
                 );
               },
               title: 'Products',
             ),
+            CustomButtonAppBarWidget(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const BaseAboutUsScreen(),
+                  ),
+                );
+              },
+              title: 'About us',
+            ),
+
             CustomButtonAppBarWidget(
               onTap: () {
                 Navigator.push(
@@ -90,8 +91,8 @@ class CustomAppBarMobile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: AppColors.darkGreenColor,
-      height: 120.sp,
+      color: Colors.black,
+      height: 90.sp,
       child: Padding(
         padding: EdgeInsets.symmetric(horizontal: 20.0.sp),
         child: Row(
@@ -103,8 +104,8 @@ class CustomAppBarMobile extends StatelessWidget {
                 'assets/image/company_logo.png',
                 fit: BoxFit.contain,
                 color: Colors.white,
-                height: 140.sp,
-                width: 140.sp,
+                height: 100.sp,
+                width: 100.sp,
               ),
             ),
             const Spacer(),
@@ -132,7 +133,7 @@ class CustomItemMobileAppBar extends StatelessWidget {
       top: 60,
       right: 10,
       child: Container(
-        color: AppColors.darkGreenColor,
+        color: Colors.black,
         width: 200.sp,
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: 20.0.sp, vertical: 10.0.sp),
@@ -156,18 +157,6 @@ class CustomItemMobileAppBar extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => const BaseAboutUsScreen(),
-                    ),
-                  );
-                },
-                title: 'About us',
-                fontSize: 30,
-              ),
-              CustomButtonAppBarWidget(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
                       builder: (context) => const BaseProducts(),
                     ),
                   );
@@ -175,6 +164,19 @@ class CustomItemMobileAppBar extends StatelessWidget {
                 title: 'Products',
                 fontSize: 30,
               ),
+              CustomButtonAppBarWidget(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const BaseAboutUsScreen(),
+                    ),
+                  );
+                },
+                title: 'About us',
+                fontSize: 30,
+              ),
+
               CustomButtonAppBarWidget(
                 onTap: () {
                   Navigator.push(

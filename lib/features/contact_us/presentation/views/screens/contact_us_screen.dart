@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_web/core/utils/app_colors.dart';
 import 'package:flutter_web/features/contact_us/presentation/views/widgets/contact_us_body.dart';
 import 'package:flutter_web/core/widgets/custom_app_bar.dart';
 import '../../../../../core/Helpers/service_locator.dart';
@@ -46,7 +45,7 @@ class ContactUsMobileScreen extends StatelessWidget {
         ),
       ],
       child: Scaffold(
-        backgroundColor: AppColors.darkGreenColor,
+        backgroundColor: Colors.black,
         body: SafeArea(
           child: BlocBuilder<HomeBloc, HomeState>(
             builder: (context, state) {

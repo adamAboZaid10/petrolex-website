@@ -10,8 +10,8 @@ import '../../../../../core/widgets/custom_form_field.dart';
 import '../../../data/contact_us_data.dart';
 
 class ContactUsForm extends StatelessWidget {
-  const ContactUsForm({super.key});
-
+   ContactUsForm({super.key});
+  final GlobalKey<FormState> formKey = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -19,13 +19,13 @@ class ContactUsForm extends StatelessWidget {
       child: Container(
         width: 500.sp,
         decoration: BoxDecoration(
-          color: AppColors.backgroundColor,
+          color: Colors.white,
           borderRadius: BorderRadius.circular(10.r),
         ),
         child: Padding(
           padding: EdgeInsets.all(24.0.sp),
           child: Form(
-            key: ContactUsData.formKey,
+            key: formKey,
             child: Column(
               children: [
                 CustomTextField(
@@ -115,11 +115,7 @@ class ContactUsForm extends StatelessWidget {
                     return CustomDefaultButton(
                       backgroundColor: AppColors.lightBrownColor,
                       onTap: () {
-                        print(ContactUsData.nameController.text.trim());
-                        print(ContactUsData.numberController.text.trim());
-                        print(ContactUsData.emailController.text.trim());
-                        print(ContactUsData.messageController.text.trim());
-                        if (ContactUsData.formKey.currentState!.validate()) {
+                        if (formKey.currentState!.validate()) {
                           context
                               .read<ContactUsBloc>()
                               .add(const SendInfoEvent());
@@ -149,7 +145,7 @@ final GlobalKey<FormState> formKey = GlobalKey<FormState>();
       padding: EdgeInsets.symmetric(horizontal: 20.0.sp),
       child: Container(
         decoration: BoxDecoration(
-          color: AppColors.backgroundColor,
+          color: Colors.white,
           borderRadius: BorderRadius.circular(10.r),
         ),
         child: Padding(

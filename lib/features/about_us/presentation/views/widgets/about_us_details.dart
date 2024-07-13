@@ -11,7 +11,6 @@ class AboutUsDetails extends StatelessWidget {
       padding: EdgeInsets.all(20.0.sp),
       child: Container(
         decoration: BoxDecoration(
-          color: AppColors.darkGreenColor.withOpacity(0.8),
           borderRadius: BorderRadius.all(Radius.circular(10.0.r)),
         ),
         child: Padding(
@@ -25,7 +24,7 @@ class AboutUsDetails extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 16.sp,
                     fontWeight: FontWeight.w400,
-                    color: Colors.white,
+                    color: Colors.black,
                     letterSpacing: 1.2,
                     shadows: [
                       Shadow(
@@ -47,7 +46,7 @@ class AboutUsDetails extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 10.sp,
                     fontWeight: FontWeight.w400,
-                    color: Colors.white,
+                    color: Colors.black,
                     letterSpacing: 1.2,
                     shadows: [
                       Shadow(
@@ -100,7 +99,6 @@ class AboutUsMobileDetails extends StatelessWidget {
       padding: EdgeInsets.all(20.0.sp),
       child: Container(
         decoration: BoxDecoration(
-          color: AppColors.darkGreenColor.withOpacity(0.8),
           borderRadius: BorderRadius.all(Radius.circular(10.0.r)),
         ),
         child: Padding(
@@ -114,7 +112,7 @@ class AboutUsMobileDetails extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 40.sp,
                     fontWeight: FontWeight.w400,
-                    color: Colors.white,
+                    color: Colors.black,
                     letterSpacing: 1.2,
                     shadows: [
                       Shadow(
@@ -136,7 +134,7 @@ class AboutUsMobileDetails extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 25.sp,
                     fontWeight: FontWeight.w400,
-                    color: Colors.white,
+                    color: Colors.black,
                     letterSpacing: 1.2,
                     shadows: [
                       Shadow(

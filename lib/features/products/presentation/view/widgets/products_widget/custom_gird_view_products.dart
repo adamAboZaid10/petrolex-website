@@ -6,7 +6,6 @@ import 'package:flutter_web/core/Helpers/enum_state.dart';
 import 'package:flutter_web/features/products/presentation/controller/products_bloc.dart';
 import 'package:flutter_web/features/products/presentation/view/screeens/base_products_details.dart';
 import 'package:shimmer/shimmer.dart';
-
 class CustomGirdViewProducts extends StatelessWidget {
   const CustomGirdViewProducts({super.key});
 
@@ -188,40 +187,42 @@ class CustomGridViewProductsItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      crossAxisAlignment: CrossAxisAlignment.center,
-      children: [
-        InkWell(
-          onTap: onTap,
-          child: Container(
-            width: imgWidth.sp,
-            height: imgHeight.sp,
-            clipBehavior: Clip.antiAliasWithSaveLayer,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10.sp),
-            ),
-            child: CachedNetworkImage(
-              imageUrl: imgPath,
-              fit: BoxFit.cover,
-              placeholder: (context, url) => const Center(
-                child: CircularProgressIndicator(),
+    return  Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          InkWell(
+            onTap: onTap,
+            child: Container(
+              width: imgWidth.sp,
+              height: imgHeight.sp,
+              clipBehavior: Clip.antiAliasWithSaveLayer,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10.sp),
+              ),
+              child: CachedNetworkImage(
+                imageUrl: imgPath,
+                fit: BoxFit.cover,
+                placeholder: (context, url) => const Center(
+                  child: CircularProgressIndicator(),
+                ),
               ),
             ),
           ),
-        ),
-        SizedBox(
-          height: 10.h,
-        ),
-        Text(
-          nameProducts,
-          style: TextStyle(
-            fontSize: fontSize.sp,
-            fontWeight: FontWeight.bold,
-            color: Colors.white,
+          SizedBox(
+            height: 10.h,
           ),
-        ),
-      ],
+          Text(
+            nameProducts,
+            maxLines: 1,
+            overflow: TextOverflow.ellipsis,
+            style: TextStyle(
+              fontSize: fontSize.sp,
+              fontWeight: FontWeight.bold,
+              color: Colors.white,
+            ),
+          ),
+        ],
     );
   }
 }

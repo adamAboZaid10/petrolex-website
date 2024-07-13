@@ -13,18 +13,26 @@ class ProductsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) =>
-      sl<ProductsBloc>()
-        ..add(const GetProductsEvent()),
-      child: const Scaffold(
-        backgroundColor: AppColors.darkGreenColor,
-        body: Column(
+      create: (context) => sl<ProductsBloc>()..add(const GetProductsEvent()),
+      child: Scaffold(
+        backgroundColor: AppColors.darkGreenColor.withOpacity(0.5),
+        body: Stack(
           children: [
-            CustomAppBar(),
-            Expanded(
-              child: SingleChildScrollView(
-                child: ProductsScreenBody(),
-              ),
+            Image.asset(
+              'assets/image/products.jpg',
+              fit: BoxFit.cover,
+              width: double.infinity,
+              height: double.infinity,
+            ),
+            const Column(
+              children: [
+                CustomAppBar(),
+                Expanded(
+                  child: SingleChildScrollView(
+                    child: ProductsScreenBody(),
+                  ),
+                ),
+              ],
             ),
           ],
         ),
@@ -32,7 +40,6 @@ class ProductsScreen extends StatelessWidget {
     );
   }
 }
-
 
 class ProductsMobileScreen extends StatelessWidget {
   const ProductsMobileScreen({super.key});
@@ -43,8 +50,7 @@ class ProductsMobileScreen extends StatelessWidget {
       providers: [
         BlocProvider(
           create: (context) =>
-          sl<ProductsBloc>()
-            ..add(const GetProductsEvent()),
+              sl<ProductsBloc>()..add(const GetProductsEvent()),
         ),
         BlocProvider(
           create: (context) => HomeBloc(),
@@ -57,21 +63,33 @@ class ProductsMobileScreen extends StatelessWidget {
             builder: (context, state) {
               return Stack(
                 children: [
-                  Column(
+                  Image.asset(
+                    'assets/image/products.jpg',
+                    fit: BoxFit.cover,
+                    width: double.infinity,
+                    height: double.infinity,
+                  ),
+                  Stack(
                     children: [
-                      CustomAppBarMobile(onTap: () {
-                        context.read<HomeBloc>().add(ChangeAppBarEvent());
-                      },),
-                      const Expanded(
-                        child: SingleChildScrollView(
-                          child: ProductsMobileScreenBody(),
-                        ),
+                      Column(
+                        children: [
+                          CustomAppBarMobile(
+                            onTap: () {
+                              context.read<HomeBloc>().add(ChangeAppBarEvent());
+                            },
+                          ),
+                          const Expanded(
+                            child: SingleChildScrollView(
+                              child: ProductsMobileScreenBody(),
+                            ),
+                          ),
+                        ],
                       ),
+                      state.changeAppBar
+                          ? const CustomItemMobileAppBar()
+                          : Container(),
                     ],
                   ),
-                  state.changeAppBar
-                      ? const CustomItemMobileAppBar()
-                      : Container(),
                 ],
               );
             },

@@ -9,12 +9,12 @@ class CustomOurServices extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(
-        horizontal: 20.0,
+      padding:  EdgeInsets.symmetric(
+        horizontal: 20.0.w,
       ),
       child: Container(
         decoration: BoxDecoration(
-          color: AppColors.darkGreenColor,
+          color: AppColors.darkGreenColor.withOpacity(0.5),
           borderRadius: BorderRadius.circular(5.0.sp),
         ),
         child: Padding(
@@ -83,7 +83,7 @@ class CustomMobileOurServices extends StatelessWidget {
       ),
       child: Container(
         decoration: BoxDecoration(
-          color: AppColors.darkGreenColor,
+          color: AppColors.darkGreenColor.withOpacity(0.5),
           borderRadius: BorderRadius.circular(5.0.sp),
         ),
         child: Padding(

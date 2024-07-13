@@ -18,7 +18,7 @@ final double fontSize ;
         Text(
           'Get in touch Now!',
           style: TextStyle(
-            color: AppColors.lightBrownColor,
+            color: Colors.white,
             fontSize: fontTitleSize.sp,
           ),
         ),
@@ -29,7 +29,7 @@ final double fontSize ;
           'Use the form below to drop us an email. Or call our Team',
           style: TextStyle(
             fontSize: fontSize.sp,
-            color: AppColors.lightBrownColor,
+            color: Colors.white,
             fontFamily: 'PlaywrightItaliaModerna',
           ),
         )

@@ -34,12 +34,26 @@ class FooterWidget extends StatelessWidget {
             key: formKey,
             child: Column(
               children: [
-                Text(
-                  'Contact Us',
-                  style: TextStyle(
-                    fontSize: 12.sp,
-                    color: Colors.white,
-                  ),
+                Row(
+
+                  children: [
+                    Image.asset(
+                      'assets/image/company_logo.png',
+                      width: 60.sp,
+                      height: 60.sp,
+
+                      color: Colors.white,
+                    ),
+                    SizedBox(width: 60.w,),
+                    Text(
+                      'Contact Us',
+                      style: TextStyle(
+                        fontSize: 12.sp,
+                        color: Colors.white,
+                      ),
+                    ),
+
+                  ],
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -219,12 +233,23 @@ class FooterMobileWidget extends StatelessWidget {
             key: formKey,
             child: Column(
               children: [
-                Text(
-                  'Contact Us',
-                  style: TextStyle(
-                    fontSize: 30.sp,
-                    color: Colors.white,
-                  ),
+                Row(
+                  children: [
+                    Image.asset(
+                      'assets/image/company_logo.png',
+                      width: 100.sp,
+                      height: 100.sp,
+                      color: Colors.white,
+                    ),
+                    SizedBox(width: 180.sp),
+                    Text(
+                      'Contact Us',
+                      style: TextStyle(
+                        fontSize: 30.sp,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ],
                 ),
                 Column(
                   children: [

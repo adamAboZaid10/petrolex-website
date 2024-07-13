@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_web/core/utils/app_colors.dart';
 
 class AskAQuestionWidget extends StatelessWidget {
   const AskAQuestionWidget({super.key});
@@ -10,7 +9,7 @@ class AskAQuestionWidget extends StatelessWidget {
     return Container(
       height: 100.sp,
       width: double.infinity,
-      decoration: const BoxDecoration(color: AppColors.backgroundColor),
+      color: Colors.white,
       child: Center(
         child: Padding(
           padding: EdgeInsets.only(top: 8.0.sp),
@@ -58,7 +57,9 @@ class AskAQuestionMobileWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      decoration: const BoxDecoration(color: AppColors.backgroundColor),
+      decoration: const BoxDecoration(
+        color: Colors.white,
+      ),
       child: Center(
         child: Padding(
           padding: EdgeInsets.only(top: 30.0.sp),
@@ -94,7 +95,9 @@ class AskAQuestionMobileWidget extends StatelessWidget {
                       'PlaywrightItaliaModerna', // Use a font that looks elegant
                 ),
               ),
-              SizedBox(height: 20.h,),
+              SizedBox(
+                height: 20.h,
+              ),
             ],
           ),
         ),

@@ -10,8 +10,8 @@ class AboutUsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      backgroundColor: AppColors.darkGreenColor,
+    return   Scaffold(
+      backgroundColor:Colors.white,
       body: Column(
         children: [
           CustomAppBar(),
@@ -34,7 +34,7 @@ class AboutUsMobileScreen extends StatelessWidget {
     return BlocProvider(
       create: (context) => HomeBloc(),
       child: Scaffold(
-        backgroundColor: AppColors.darkGreenColor,
+        backgroundColor:Colors.white,
         body: SafeArea(
           child: BlocBuilder<HomeBloc, HomeState>(
             builder: (context, state) {

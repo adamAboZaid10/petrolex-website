@@ -30,16 +30,13 @@ class ProductsDetailsMobileScreenBody extends StatelessWidget {
 final int id;
   @override
   Widget build(BuildContext context) {
-    return  Container(
-      color: AppColors.backgroundColor,
-      child: Column(
-        children: [
-          // const CustomTopImageMobileProductsScreen(),
-          SizedBox(height: 20.h,),
-          ProductsMobileDetails(id: id,),
-          FooterMobileWidget(),
-        ],
-      ),
+    return  Column(
+      children: [
+        // const CustomTopImageMobileProductsScreen(),
+        SizedBox(height: 20.h,),
+        ProductsMobileDetails(id: id,),
+        FooterMobileWidget(),
+      ],
     );
   }
 }

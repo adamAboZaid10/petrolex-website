@@ -13,7 +13,7 @@ class GetInTouchSection extends StatelessWidget {
     return Container(
       width: 900.w,
       decoration: const BoxDecoration(
-        color: AppColors.darkGreenColor,
+        color: Colors.black,
       ),
       child: Padding(
         padding: EdgeInsets.only(top: 10.0.sp),
@@ -21,13 +21,14 @@ class GetInTouchSection extends StatelessWidget {
           children: [
             const GetInTouchSectionTitle(),
             SizedBox(height: 20.0.sp),
-            const ContactUsForm(),
+            ContactUsForm(),
           ],
         ),
       ),
     );
   }
 }
+
 class GetInTouchMobileSection extends StatelessWidget {
   const GetInTouchMobileSection({super.key});
 
@@ -36,7 +37,7 @@ class GetInTouchMobileSection extends StatelessWidget {
     return Container(
       width: double.infinity,
       decoration: const BoxDecoration(
-        color: AppColors.darkGreenColor,
+        color: Colors.black,
       ),
       child: Padding(
         padding: EdgeInsets.only(top: 10.0.sp),
@@ -47,8 +48,10 @@ class GetInTouchMobileSection extends StatelessWidget {
               fontSize: 20,
             ),
             SizedBox(height: 10.0.h),
-             ContactUsMobileForm(),
-            SizedBox(height: 10.h,),
+            ContactUsMobileForm(),
+            SizedBox(
+              height: 10.h,
+            ),
           ],
         ),
       ),
