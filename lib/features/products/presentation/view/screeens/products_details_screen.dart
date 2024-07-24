@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_web/features/products/presentation/controller/products_bloc.dart';
 import '../../../../../core/Helpers/service_locator.dart';
 import '../../../../../core/widgets/custom_app_bar.dart';
 import '../../../../home/presentation/controller/home_bloc.dart';
+import '../../controller/products_bloc.dart';
 import '../widgets/details_widgets/products_details_screen_body.dart';
 
 class ProductsDetailsScreen extends StatelessWidget {
@@ -61,7 +61,6 @@ class ProductsDetailsMobileScreen extends StatelessWidget {
         ),
       ],
       child: Scaffold(
-
         body: BlocBuilder<HomeBloc, HomeState>(
           builder: (context, state) {
             return Stack(
@@ -76,17 +75,18 @@ class ProductsDetailsMobileScreen extends StatelessWidget {
                   children: [
                     Column(
                       children: [
-
                         CustomAppBarMobile(
                           onTap: () {
                             context.read<HomeBloc>().add(ChangeAppBarEvent());
                           },
                         ),
                         Expanded(
-                          child: SingleChildScrollView(
-                            child: ProductsDetailsMobileScreenBody(
-                              id: id,
-                            ),
+                          child: ListView(
+                            children: [
+                              ProductsDetailsMobileScreenBody(
+                                id: id,
+                              ),
+                            ],
                           ),
                         ),
                       ],

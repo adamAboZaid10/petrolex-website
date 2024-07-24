@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_web/core/utils/app_colors.dart';
-import 'package:flutter_web/features/contact_us/presentation/views/widgets/contact_form.dart';
-import 'package:flutter_web/features/contact_us/presentation/views/widgets/get_in_touch_section_title.dart';
+import 'package:petrolex/core/utils/app_colors.dart';
+import 'package:petrolex/features/contact_us/presentation/views/widgets/contact_form.dart';
+import 'package:petrolex/features/contact_us/presentation/views/widgets/get_in_touch_section_title.dart';
 
 class GetInTouchSection extends StatelessWidget {
   const GetInTouchSection({super.key});

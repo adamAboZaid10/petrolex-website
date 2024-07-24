@@ -1,7 +1,7 @@
 import 'package:either_dart/src/either.dart';
 
-import 'package:flutter_web/core/Helpers/errors.dart';
-import 'package:flutter_web/features/contact_us/data/remote_data_source.dart';
+import 'package:petrolex/core/Helpers/errors.dart';
+import 'package:petrolex/features/contact_us/data/remote_data_source.dart';
 
 import '../domain/base_repository.dart';
 

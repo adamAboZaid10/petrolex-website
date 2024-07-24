@@ -2,9 +2,9 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_web/core/Helpers/enum_state.dart';
-import 'package:flutter_web/features/products/presentation/controller/products_bloc.dart';
-import 'package:flutter_web/features/products/presentation/view/screeens/base_products_details.dart';
+import 'package:petrolex/core/Helpers/enum_state.dart';
+import 'package:petrolex/features/products/presentation/controller/products_bloc.dart';
+import 'package:petrolex/features/products/presentation/view/screeens/base_products_details.dart';
 import 'package:shimmer/shimmer.dart';
 class CustomGirdViewProducts extends StatelessWidget {
   const CustomGirdViewProducts({super.key});
@@ -23,20 +23,36 @@ class CustomGirdViewProducts extends StatelessWidget {
               mainAxisSpacing: 2.sp,
               crossAxisSpacing: 2.sp,
               children: List.generate(6, (index) {
-                return CustomGridViewProductsItem(
-                  imgPath:
-                      'https://hips.hearstapps.com/hmg-prod/images/lionel-messi-celebrates-after-their-sides-third-goal-by-news-photo-1686170172.jpg?crop=0.66653xw:1xh;center,top&resize=640:*',
-                  nameProducts: 'Products name ',
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const BaseProductsDetails(
-                          id: 1,
+                return Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    InkWell(
+                      onTap: (){},
+                      child: Container(
+                        width: 150.sp,
+                        height: 150.sp,
+                        clipBehavior: Clip.antiAliasWithSaveLayer,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10.sp),
+                            color: Colors.red
                         ),
                       ),
-                    );
-                  },
+                    ),
+                    SizedBox(
+                      height: 10.h,
+                    ),
+                    Text(
+                      '',
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      style: TextStyle(
+                        fontSize: 10.sp,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ],
                 );
               }),
             ),
@@ -99,23 +115,36 @@ class CustomGirdViewMobileProducts extends StatelessWidget {
               crossAxisSpacing: 2.sp,
               childAspectRatio: 1 / 1.5,
               children: List.generate(6, (index) {
-                return CustomGridViewProductsItem(
-                  imgHeight: 200,
-                  imgWidth: 200,
-                  fontSize: 30,
-                  imgPath:
-                      'https://hips.hearstapps.com/hmg-prod/images/lionel-messi-celebrates-after-their-sides-third-goal-by-news-photo-1686170172.jpg?crop=0.66653xw:1xh;center,top&resize=640:*',
-                  nameProducts: 'Products name ',
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const BaseProductsDetails(
-                          id: 1,
+                return Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    InkWell(
+                      onTap: (){},
+                      child: Container(
+                        width: 200.sp,
+                        height: 200.sp,
+                        clipBehavior: Clip.antiAliasWithSaveLayer,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10.sp),
+                          color: Colors.red
                         ),
                       ),
-                    );
-                  },
+                    ),
+                    SizedBox(
+                      height: 10.h,
+                    ),
+                    Text(
+                      '',
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      style: TextStyle(
+                        fontSize: 30.sp,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ],
                 );
               }),
             ),
@@ -203,8 +232,20 @@ class CustomGridViewProductsItem extends StatelessWidget {
               child: CachedNetworkImage(
                 imageUrl: imgPath,
                 fit: BoxFit.cover,
-                placeholder: (context, url) => const Center(
-                  child: CircularProgressIndicator(),
+                placeholder: (context, url) =>  Center(
+                  child: Shimmer.fromColors(
+                    baseColor: Colors.grey,
+                    highlightColor: Colors.grey.shade300,
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(10.sp),
+                      ),
+                      width:imgWidth.sp,
+                      height: imgHeight.sp,
+
+                    ),
+                  ),
                 ),
               ),
             ),

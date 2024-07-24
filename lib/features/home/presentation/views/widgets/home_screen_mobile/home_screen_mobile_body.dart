@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_web/features/home/presentation/controller/home_bloc.dart';
-import 'package:flutter_web/features/home/presentation/views/widgets/custom_define_about_company_widget.dart';
-import 'package:flutter_web/features/home/presentation/views/widgets/custom_our_mission.dart';
-import 'package:flutter_web/features/home/presentation/views/widgets/custom_our_services.dart';
+import 'package:petrolex/features/home/presentation/controller/home_bloc.dart';
+import 'package:petrolex/features/home/presentation/views/widgets/custom_define_about_company_widget.dart';
+import 'package:petrolex/features/home/presentation/views/widgets/custom_our_mission.dart';
+import 'package:petrolex/features/home/presentation/views/widgets/custom_our_services.dart';
 
 import '../../../../../../core/widgets/footer.dart';
 import '../custom_carousal_widget.dart';

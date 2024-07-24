@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:flutter_web/features/about_us/presentation/views/widgets/about_us_details.dart';
-import 'package:flutter_web/features/about_us/presentation/views/widgets/about_us_image_section.dart';
+import 'package:petrolex/features/about_us/presentation/views/widgets/about_us_details.dart';
+import 'package:petrolex/features/about_us/presentation/views/widgets/about_us_image_section.dart';
 
 import '../../../../../core/widgets/footer.dart';
 

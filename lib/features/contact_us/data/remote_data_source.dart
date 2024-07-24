@@ -1,5 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:flutter_web/features/contact_us/data/contact_us_data.dart';
+import 'package:petrolex/features/contact_us/data/contact_us_data.dart';
 
 abstract class BaseContactUsRemoteDataSource {
   Future<String> sendInfo();

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_web/features/about_us/presentation/views/screens/about_us.dart';
+import 'package:petrolex/features/about_us/presentation/views/screens/about_us.dart';
 
 class BaseAboutUsScreen extends StatelessWidget {
   const BaseAboutUsScreen({super.key});

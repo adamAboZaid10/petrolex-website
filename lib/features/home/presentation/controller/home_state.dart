@@ -3,7 +3,6 @@ part of 'home_bloc.dart';
 class HomeState extends Equatable {
   final int currentIndex;
   final bool changeAppBar;
-
   const HomeState({
     required this.currentIndex,
     required this.changeAppBar,
@@ -28,7 +27,7 @@ class HomeState extends Equatable {
 
   @override
   List<Object> get props => [
-        currentIndex,
-        changeAppBar,
-      ];
+    currentIndex,
+    changeAppBar,
+  ];
 }

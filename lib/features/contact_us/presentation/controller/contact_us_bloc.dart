@@ -1,6 +1,6 @@
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
-import 'package:flutter_web/core/Helpers/enum_state.dart';
+import 'package:petrolex/core/Helpers/enum_state.dart';
 
 import '../../domain/use_cases/send_info_use_case.dart';
 

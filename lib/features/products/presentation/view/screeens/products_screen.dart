@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_web/core/utils/app_colors.dart';
 import '../../../../../core/Helpers/service_locator.dart';
+import '../../../../../core/utils/app_colors.dart';
 import '../../../../../core/widgets/custom_app_bar.dart';
 import '../../../../home/presentation/controller/home_bloc.dart';
 import '../../controller/products_bloc.dart';
@@ -78,9 +78,11 @@ class ProductsMobileScreen extends StatelessWidget {
                               context.read<HomeBloc>().add(ChangeAppBarEvent());
                             },
                           ),
-                          const Expanded(
-                            child: SingleChildScrollView(
-                              child: ProductsMobileScreenBody(),
+                           Expanded(
+                            child: ListView(
+                              children: const [
+                                ProductsMobileScreenBody(),
+                              ],
                             ),
                           ),
                         ],

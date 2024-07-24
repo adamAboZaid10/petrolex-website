@@ -1,17 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_web/core/utils/app_colors.dart';
-import 'package:flutter_web/features/about_us/presentation/views/widgets/about_us_body.dart';
-import 'package:flutter_web/core/widgets/custom_app_bar.dart';
-import 'package:flutter_web/features/home/presentation/controller/home_bloc.dart';
+import 'package:petrolex/features/about_us/presentation/views/widgets/about_us_body.dart';
+import 'package:petrolex/core/widgets/custom_app_bar.dart';
+import 'package:petrolex/features/home/presentation/controller/home_bloc.dart';
 
 class AboutUsScreen extends StatelessWidget {
   const AboutUsScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return   Scaffold(
-      backgroundColor:Colors.white,
+    return const Scaffold(
+      backgroundColor: Colors.white,
       body: Column(
         children: [
           CustomAppBar(),
@@ -34,7 +33,7 @@ class AboutUsMobileScreen extends StatelessWidget {
     return BlocProvider(
       create: (context) => HomeBloc(),
       child: Scaffold(
-        backgroundColor:Colors.white,
+        backgroundColor: Colors.white,
         body: SafeArea(
           child: BlocBuilder<HomeBloc, HomeState>(
             builder: (context, state) {
@@ -47,9 +46,11 @@ class AboutUsMobileScreen extends StatelessWidget {
                           context.read<HomeBloc>().add(ChangeAppBarEvent());
                         },
                       ),
-                      const Expanded(
-                        child: SingleChildScrollView(
-                          child: AboutUsMobileBody(),
+                      Expanded(
+                        child: ListView(
+                          children: const [
+                            AboutUsMobileBody(),
+                          ],
                         ),
                       ),
                     ],

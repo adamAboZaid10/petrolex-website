@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_web/features/contact_us/presentation/views/screens/contact_us_screen.dart';
+import 'package:petrolex/features/contact_us/presentation/views/screens/contact_us_screen.dart';
 
 class BaseContactUsScreen extends StatelessWidget {
   const BaseContactUsScreen({super.key});

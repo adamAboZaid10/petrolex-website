@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_web/features/contact_us/presentation/views/widgets/contact_us_body.dart';
-import 'package:flutter_web/core/widgets/custom_app_bar.dart';
+import 'package:petrolex/features/contact_us/presentation/views/widgets/contact_us_body.dart';
+import 'package:petrolex/core/widgets/custom_app_bar.dart';
 import '../../../../../core/Helpers/service_locator.dart';
 import '../../../../home/presentation/controller/home_bloc.dart';
 import '../../controller/contact_us_bloc.dart';
@@ -58,9 +58,11 @@ class ContactUsMobileScreen extends StatelessWidget {
                           context.read<HomeBloc>().add(ChangeAppBarEvent());
                         },
                       ),
-                      const Expanded(
-                        child: SingleChildScrollView(
-                          child: ContactUsMobileBody(),
+                       Expanded(
+                        child: ListView(
+                          children: const [
+                            ContactUsMobileBody(),
+                          ],
                         ),
                       ),
                     ],

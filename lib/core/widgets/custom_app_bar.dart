@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_web/core/utils/app_colors.dart';
-import 'package:flutter_web/core/widgets/custom_button_app_bar_widget.dart';
-import 'package:flutter_web/features/about_us/presentation/views/screens/base_about_us.dart';
-import 'package:flutter_web/features/contact_us/presentation/views/screens/base_contact_us.dart';
-import 'package:flutter_web/features/home/presentation/views/screens/base_home.dart';
-import 'package:flutter_web/features/products/presentation/view/screeens/base_products.dart';
+import 'package:petrolex/core/widgets/custom_button_app_bar_widget.dart';
+import 'package:petrolex/features/about_us/presentation/views/screens/base_about_us.dart';
+import 'package:petrolex/features/contact_us/presentation/views/screens/base_contact_us.dart';
+import 'package:petrolex/features/home/presentation/views/screens/base_home.dart';
+import 'package:petrolex/features/products/presentation/view/screeens/base_products.dart';
 
 class CustomAppBar extends StatelessWidget {
   const CustomAppBar({super.key});
@@ -140,54 +139,74 @@ class CustomItemMobileAppBar extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              CustomButtonAppBarWidget(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const BaseHome(),
-                    ),
-                  );
-                },
-                title: 'Home',
-                fontSize: 30,
+              Container(
+                color: Colors.black,
+                height: 60.sp,
+                width: 200.sp,
+                child: CustomButtonAppBarWidget(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const BaseHome(),
+                      ),
+                    );
+                  },
+                  title: 'Home',
+                  fontSize: 30,
+                ),
               ),
-              CustomButtonAppBarWidget(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const BaseProducts(),
-                    ),
-                  );
-                },
-                title: 'Products',
-                fontSize: 30,
+              Container(
+                color: Colors.black,
+                height: 60.sp,
+                width: 200.sp,
+                child: CustomButtonAppBarWidget(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const BaseProducts(),
+                      ),
+                    );
+                  },
+                  title: 'Products',
+                  fontSize: 30,
+                ),
               ),
-              CustomButtonAppBarWidget(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const BaseAboutUsScreen(),
-                    ),
-                  );
-                },
-                title: 'About us',
-                fontSize: 30,
+              Container(
+                color: Colors.black,
+                height: 60.sp,
+                width: 200.sp,
+                child: CustomButtonAppBarWidget(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const BaseAboutUsScreen(),
+                      ),
+                    );
+                  },
+                  title: 'About us',
+                  fontSize: 30,
+                ),
               ),
 
-              CustomButtonAppBarWidget(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const BaseContactUsScreen(),
-                    ),
-                  );
-                },
-                title: 'Contact us',
-                fontSize: 30,
+              Container(
+                color: Colors.black,
+                height: 60.sp,
+                width: 200.sp,
+                child: CustomButtonAppBarWidget(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const BaseContactUsScreen(),
+                      ),
+                    );
+                  },
+                  title: 'Contact us',
+                  fontSize: 30,
+                ),
               ),
             ],
           ),

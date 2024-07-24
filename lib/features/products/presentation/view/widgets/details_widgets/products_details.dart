@@ -2,7 +2,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_web/core/utils/app_colors.dart';
+import 'package:petrolex/core/utils/app_colors.dart';
 import 'package:shimmer/shimmer.dart';
 
 import '../../../../../../core/Helpers/enum_state.dart';
@@ -91,18 +91,10 @@ class ProductsDetails extends StatelessWidget {
                         SizedBox(
                           width: 20.w,
                         ),
-                        SizedBox(
+                        Container(
                           width: 200.sp,
                           height: 200.sp,
-                          child: CachedNetworkImage(
-                            imageUrl:
-                                'https://hips.hearstapps.com/hmg-prod/images/lionel-messi-celebrates-after-their-sides-third-goal-by-news-photo-1686170172.jpg?crop=0.66653xw:1xh;center,top&resize=640:*',
-                            placeholder: (context, url) => const Center(
-                              child: CircularProgressIndicator(),
-                            ),
-                            errorWidget: (context, url, error) =>
-                                const Icon(Icons.error),
-                          ),
+                          color: Colors.white,
                         ),
                       ],
                     ),
@@ -233,8 +225,16 @@ class ProductsDetails extends StatelessWidget {
                         height: 200.sp,
                         child: CachedNetworkImage(
                           imageUrl: state.products[id].img!,
-                          placeholder: (context, url) => const Center(
-                            child: CircularProgressIndicator(),
+                          placeholder: (context, url) =>  Center(
+                            child: Shimmer.fromColors(
+                              baseColor: Colors.grey,
+                              highlightColor: Colors.grey.shade300,
+                              child: Container(
+                                width: 200.sp,
+                                height: 200.sp,
+                                color: Colors.white,
+                              ),
+                            ),
                           ),
                           errorWidget: (context, url, error) =>
                               const Icon(Icons.error),
@@ -347,19 +347,11 @@ class ProductsMobileDetails extends StatelessWidget {
                         SizedBox(
                           width: 20.w,
                         ),
-                        SizedBox(
+                        Container(
                           width: 250.sp,
                           height: 250.sp,
-                          child: CachedNetworkImage(
-                            fit: BoxFit.cover,
-                            imageUrl:
-                                'https://hips.hearstapps.com/hmg-prod/images/lionel-messi-celebrates-after-their-sides-third-goal-by-news-photo-1686170172.jpg?crop=0.66653xw:1xh;center,top&resize=640:*',
-                            placeholder: (context, url) => const Center(
-                              child: CircularProgressIndicator(),
-                            ),
-                            errorWidget: (context, url, error) =>
-                                const Icon(Icons.error),
-                          ),
+                          color: Colors.white,
+
                         ),
                       ],
                     ),
@@ -492,8 +484,16 @@ class ProductsMobileDetails extends StatelessWidget {
                         child: CachedNetworkImage(
                           fit: BoxFit.cover,
                           imageUrl: state.products[id].img!,
-                          placeholder: (context, url) => const Center(
-                            child: CircularProgressIndicator(),
+                          placeholder: (context, url) =>  Center(
+                            child: Shimmer.fromColors(
+                              baseColor: Colors.grey,
+                              highlightColor: Colors.grey.shade300,
+                              child: Container(
+                                width: 250.sp,
+                                height: 250.sp,
+                                color: Colors.white,
+                              ),
+                            ),
                           ),
                           errorWidget: (context, url, error) =>
                               const Icon(Icons.error),

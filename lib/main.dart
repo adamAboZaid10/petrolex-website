@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_web/core/Helpers/service_locator.dart';
-import 'package:flutter_web/core/utils/app_colors.dart';
-import 'package:flutter_web/features/home/presentation/views/screens/home_screen_mobile.dart';
-import 'package:flutter_web/features/home/presentation/views/screens/home_screen_web.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'core/Helpers/service_locator.dart';
+import 'core/utils/app_colors.dart';
+import 'features/home/presentation/views/screens/home_screen.dart';
+import 'features/home/presentation/views/screens/home_screen_mobile.dart';
 import 'firebase_options.dart';
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
@@ -52,14 +52,14 @@ class ResponsiveScreen extends StatelessWidget {
         if (constraints.maxWidth >= 600) {
           return MediaQuery(
             data: MediaQuery.of(context).copyWith(
-              textScaleFactor: 1.25,
+              textScaler: const TextScaler.linear(1.25),
             ),
             child: const HomeScreen(),
           );
         } else {
           return MediaQuery(
             data: MediaQuery.of(context).copyWith(
-              textScaleFactor: 0.6,
+              textScaler: const TextScaler.linear(0.6),
             ),
             child: const HomeScreenMobile(),
           );

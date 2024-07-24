@@ -1,7 +1,8 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_web/features/home/presentation/controller/home_bloc.dart';
-import 'package:flutter_web/features/home/presentation/views/widgets/home_screen_mobile/home_screen_mobile_body.dart';
+import 'package:petrolex/features/home/presentation/controller/home_bloc.dart';
+import 'package:petrolex/features/home/presentation/views/widgets/home_screen_mobile/home_screen_mobile_body.dart';
 import '../../../../../core/widgets/custom_app_bar.dart';
 
 class HomeScreenMobile extends StatelessWidget {
@@ -37,10 +38,12 @@ class HomeScreenMobile extends StatelessWidget {
                               context.read<HomeBloc>().add(ChangeAppBarEvent());
                             },
                           ),
-                          const Expanded(
-                            child: SingleChildScrollView(
-                              physics: BouncingScrollPhysics(),
-                              child: HomeScreenMobileBody(),
+                           Expanded(
+                            child: ListView(
+                              physics: const BouncingScrollPhysics(),
+                              children: const [
+                                HomeScreenMobileBody(),
+                              ],
                             ),
                           ),
                         ],

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_web/core/utils/app_colors.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
 void showToast(BuildContext context, String message) {
@@ -12,8 +11,8 @@ void showToast(BuildContext context, String message) {
       borderRadius: BorderRadius.circular(4.r),
       gradient: const LinearGradient(
         colors: [
-         AppColors.darkGreenColor,
-         AppColors.darkGreenColor,
+          Colors.black,
+          Colors.black,
         ],
         begin: Alignment.topCenter,
         end: Alignment.bottomCenter,

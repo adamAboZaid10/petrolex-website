@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_web/features/contact_us/presentation/views/screens/contact_us_screen.dart';
-import 'package:flutter_web/features/products/presentation/view/screeens/products_screen.dart';
+import 'package:petrolex/features/products/presentation/view/screeens/products_screen.dart';
 
 class BaseProducts extends StatelessWidget {
   const BaseProducts({super.key});
