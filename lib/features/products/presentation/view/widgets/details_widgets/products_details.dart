@@ -224,8 +224,9 @@ class ProductsDetails extends StatelessWidget {
                         width: 200.sp,
                         height: 200.sp,
                         child: CachedNetworkImage(
+                          colorBlendMode: BlendMode.srcOver,
                           imageUrl: state.products[id].img!,
-                          placeholder: (context, url) =>  Center(
+                          placeholder: (context, url) => Center(
                             child: Shimmer.fromColors(
                               baseColor: Colors.grey,
                               highlightColor: Colors.grey.shade300,
@@ -351,7 +352,6 @@ class ProductsMobileDetails extends StatelessWidget {
                           width: 250.sp,
                           height: 250.sp,
                           color: Colors.white,
-
                         ),
                       ],
                     ),
@@ -394,7 +394,7 @@ class ProductsMobileDetails extends StatelessWidget {
                   padding: EdgeInsets.all(20.sp),
                   height: 400.sp,
                   decoration: BoxDecoration(
-                    color:Colors.black.withOpacity(0.6),
+                    color: Colors.black.withOpacity(0.6),
                     borderRadius: BorderRadius.circular(10.r),
                     boxShadow: [
                       BoxShadow(
@@ -482,9 +482,10 @@ class ProductsMobileDetails extends StatelessWidget {
                         width: 250.sp,
                         height: 250.sp,
                         child: CachedNetworkImage(
+                          colorBlendMode: BlendMode.srcOver,
                           fit: BoxFit.cover,
                           imageUrl: state.products[id].img!,
-                          placeholder: (context, url) =>  Center(
+                          placeholder: (context, url) => Center(
                             child: Shimmer.fromColors(
                               baseColor: Colors.grey,
                               highlightColor: Colors.grey.shade300,

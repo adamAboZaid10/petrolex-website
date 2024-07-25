@@ -12,6 +12,7 @@ class CustomTopImageProductsScreen extends StatelessWidget {
       child: Image.asset(
         'assets/image/slider3.jpg',
         fit: BoxFit.cover,
+        colorBlendMode: BlendMode.srcOver,
       ),
     );
   }
@@ -28,6 +29,7 @@ class CustomTopImageMobileProductsScreen extends StatelessWidget {
       child: Image.asset(
         'assets/image/slider3.jpg',
         fit: BoxFit.cover,
+        colorBlendMode: BlendMode.srcOver,
       ),
     );
   }

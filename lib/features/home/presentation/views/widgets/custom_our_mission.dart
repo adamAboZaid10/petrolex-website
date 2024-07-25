@@ -34,7 +34,11 @@ class CustomOurMission extends StatelessWidget {
                       alignment: Alignment.center,
                       width: 30.sp,
                       height: 30.sp,
-                      color: AppColors.blackColor,
+                      ///ToDo change change
+                      // colorFilter:  const ColorFilter.mode(
+                      //   AppColors.backgroundColor,
+                      //   BlendMode.srcOver,
+                      // ),
                     ),
                   ],
                 ),
@@ -99,7 +103,11 @@ class CustomOurMissionMobile extends StatelessWidget {
                       alignment: Alignment.center,
                       width: 60.sp,
                       height: 60.sp,
-                      color: AppColors.blackColor,
+                      ///ToDo change change
+                      // colorFilter:  const ColorFilter.mode(
+                      //   AppColors.backgroundColor,
+                      //   BlendMode.srcOver,
+                      // ),
                     ),
                   ],
                 ),

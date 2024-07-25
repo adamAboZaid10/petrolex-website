@@ -2,10 +2,12 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 import 'package:petrolex/core/Helpers/enum_state.dart';
 import 'package:petrolex/features/products/presentation/controller/products_bloc.dart';
-import 'package:petrolex/features/products/presentation/view/screeens/base_products_details.dart';
 import 'package:shimmer/shimmer.dart';
+
+import '../../../../../../core/utils/routes.dart';
 class CustomGirdViewProducts extends StatelessWidget {
   const CustomGirdViewProducts({super.key});
 
@@ -69,14 +71,8 @@ class CustomGirdViewProducts extends StatelessWidget {
                 imgPath: state.products[index].imgCover!,
                 nameProducts: state.products[index].name!,
                 onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => BaseProductsDetails(
-                        id: index,
-                      ),
-                    ),
-                  );
+
+                  context.go(AppRoutes.productsDetails, extra: index);
                 },
               );
             }),
@@ -169,14 +165,7 @@ class CustomGirdViewMobileProducts extends StatelessWidget {
                   imgPath: state.products[index].imgCover!,
                   nameProducts: state.products[index].name!,
                   onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => BaseProductsDetails(
-                          id: index,
-                        ),
-                      ),
-                    );
+                    context.go(AppRoutes.productsDetails, extra: index);
                   },
                 ),
               );
@@ -230,6 +219,7 @@ class CustomGridViewProductsItem extends StatelessWidget {
                 borderRadius: BorderRadius.circular(10.sp),
               ),
               child: CachedNetworkImage(
+                colorBlendMode: BlendMode.srcOver,
                 imageUrl: imgPath,
                 fit: BoxFit.cover,
                 placeholder: (context, url) =>  Center(

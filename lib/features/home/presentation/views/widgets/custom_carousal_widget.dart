@@ -39,6 +39,7 @@ class CustomCarouselWidget extends StatelessWidget {
                   item,
                   width: 1000.0.sp,
                   height: 1000.0.sp,
+                  colorBlendMode: BlendMode.srcOver,
                 ),
               ),
             ),
@@ -80,6 +81,7 @@ class CustomCarouselMobileWidget extends StatelessWidget {
                 item,
                 width: 1000.0.sp,
                 height: 1000.0.sp,
+                colorBlendMode: BlendMode.srcOver,
               ),
             ),
           )

@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
+import 'package:petrolex/core/utils/routes.dart';
 import 'package:petrolex/core/widgets/custom_button_app_bar_widget.dart';
-import 'package:petrolex/features/about_us/presentation/views/screens/base_about_us.dart';
-import 'package:petrolex/features/contact_us/presentation/views/screens/base_contact_us.dart';
-import 'package:petrolex/features/home/presentation/views/screens/base_home.dart';
-import 'package:petrolex/features/products/presentation/view/screeens/base_products.dart';
 
 class CustomAppBar extends StatelessWidget {
   const CustomAppBar({super.key});
@@ -29,46 +27,26 @@ class CustomAppBar extends StatelessWidget {
             const Spacer(),
             CustomButtonAppBarWidget(
               onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const BaseHome(),
-                  ),
-                );
+                context.go(AppRoutes.home);
               },
               title: 'Home',
             ),
             CustomButtonAppBarWidget(
               onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const BaseProducts(),
-                  ),
-                );
+                context.go(AppRoutes.products);
               },
               title: 'Products',
             ),
             CustomButtonAppBarWidget(
               onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const BaseAboutUsScreen(),
-                  ),
-                );
+                context.go(AppRoutes.aboutUs);
               },
               title: 'About us',
             ),
 
             CustomButtonAppBarWidget(
               onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const BaseContactUsScreen(),
-                  ),
-                );
+                context.go(AppRoutes.contactUs);
               },
               title: 'Contact us',
             ),
@@ -145,12 +123,7 @@ class CustomItemMobileAppBar extends StatelessWidget {
                 width: 200.sp,
                 child: CustomButtonAppBarWidget(
                   onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const BaseHome(),
-                      ),
-                    );
+                    context.go(AppRoutes.home);
                   },
                   title: 'Home',
                   fontSize: 30,
@@ -162,12 +135,7 @@ class CustomItemMobileAppBar extends StatelessWidget {
                 width: 200.sp,
                 child: CustomButtonAppBarWidget(
                   onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const BaseProducts(),
-                      ),
-                    );
+                    context.go(AppRoutes.products);
                   },
                   title: 'Products',
                   fontSize: 30,
@@ -179,12 +147,7 @@ class CustomItemMobileAppBar extends StatelessWidget {
                 width: 200.sp,
                 child: CustomButtonAppBarWidget(
                   onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const BaseAboutUsScreen(),
-                      ),
-                    );
+                    context.go(AppRoutes.aboutUs);
                   },
                   title: 'About us',
                   fontSize: 30,
@@ -197,12 +160,7 @@ class CustomItemMobileAppBar extends StatelessWidget {
                 width: 200.sp,
                 child: CustomButtonAppBarWidget(
                   onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const BaseContactUsScreen(),
-                      ),
-                    );
+                    context.go(AppRoutes.contactUs);
                   },
                   title: 'Contact us',
                   fontSize: 30,

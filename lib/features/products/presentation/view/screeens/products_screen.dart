@@ -23,6 +23,8 @@ class ProductsScreen extends StatelessWidget {
               fit: BoxFit.cover,
               width: double.infinity,
               height: double.infinity,
+              colorBlendMode: BlendMode.srcOver,
+
             ),
             const Column(
               children: [
@@ -68,6 +70,7 @@ class ProductsMobileScreen extends StatelessWidget {
                     fit: BoxFit.cover,
                     width: double.infinity,
                     height: double.infinity,
+                    colorBlendMode: BlendMode.srcOver,
                   ),
                   Stack(
                     children: [
