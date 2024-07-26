@@ -91,7 +91,7 @@ class CustomAppBarMobile extends StatelessWidget {
               icon: Icon(
                 Icons.menu,
                 color: Colors.white,
-                size: 40.sp,
+                size: 60.sp,
               ),
             ),
           ],
@@ -111,60 +111,40 @@ class CustomItemMobileAppBar extends StatelessWidget {
       right: 10,
       child: Container(
         color: Colors.black,
-        width: 200.sp,
+        width: 250.sp,
         child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 20.0.sp, vertical: 10.0.sp),
+          padding: EdgeInsets.symmetric(horizontal: 30.0.sp, vertical: 10.0.sp),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Container(
-                color: Colors.black,
-                height: 60.sp,
-                width: 200.sp,
-                child: CustomButtonAppBarWidget(
-                  onTap: () {
-                    context.go(AppRoutes.home);
-                  },
-                  title: 'Home',
-                  fontSize: 30,
-                ),
+              CustomButtonMobileAppBarWidget(
+                onTap: () {
+                  context.go(AppRoutes.home);
+                },
+                title: 'Home',
+                fontSize: 50,
               ),
-              Container(
-                color: Colors.black,
-                height: 60.sp,
-                width: 200.sp,
-                child: CustomButtonAppBarWidget(
-                  onTap: () {
-                    context.go(AppRoutes.products);
-                  },
-                  title: 'Products',
-                  fontSize: 30,
-                ),
+              CustomButtonMobileAppBarWidget(
+                onTap: () {
+                  context.go(AppRoutes.products);
+                },
+                title: 'Products',
+                fontSize: 50,
               ),
-              Container(
-                color: Colors.black,
-                height: 60.sp,
-                width: 200.sp,
-                child: CustomButtonAppBarWidget(
-                  onTap: () {
-                    context.go(AppRoutes.aboutUs);
-                  },
-                  title: 'About us',
-                  fontSize: 30,
-                ),
+              CustomButtonMobileAppBarWidget(
+                onTap: () {
+                  context.go(AppRoutes.aboutUs);
+                },
+                title: 'About us',
+                fontSize: 50,
               ),
 
-              Container(
-                color: Colors.black,
-                height: 60.sp,
-                width: 200.sp,
-                child: CustomButtonAppBarWidget(
-                  onTap: () {
-                    context.go(AppRoutes.contactUs);
-                  },
-                  title: 'Contact us',
-                  fontSize: 30,
-                ),
+              CustomButtonMobileAppBarWidget(
+                onTap: () {
+                  context.go(AppRoutes.contactUs);
+                },
+                title: 'Contact us',
+                fontSize: 50,
               ),
             ],
           ),

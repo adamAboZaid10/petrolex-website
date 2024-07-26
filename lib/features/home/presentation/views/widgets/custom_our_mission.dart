@@ -103,11 +103,6 @@ class CustomOurMissionMobile extends StatelessWidget {
                       alignment: Alignment.center,
                       width: 60.sp,
                       height: 60.sp,
-                      ///ToDo change change
-                      // colorFilter:  const ColorFilter.mode(
-                      //   AppColors.backgroundColor,
-                      //   BlendMode.srcOver,
-                      // ),
                     ),
                   ],
                 ),
@@ -119,7 +114,7 @@ class CustomOurMissionMobile extends StatelessWidget {
                 'Our Mission',
                 style: TextStyle(
                   color: AppColors.lightBrownColor,
-                  fontSize: 40.sp,
+                  fontSize: 50.sp,
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -130,7 +125,7 @@ class CustomOurMissionMobile extends StatelessWidget {
                 'To create, strengthen, and Expand our reach and our services by growing our network of partners with International Leading services Provider and reaching new and bigger markets regionally in the MENA region and Beyond.',
                 style: TextStyle(
                   color: Colors.white,
-                  fontSize: 30.sp,
+                  fontSize: 40.sp,
                   fontWeight: FontWeight.w400,
                 ),
               ),

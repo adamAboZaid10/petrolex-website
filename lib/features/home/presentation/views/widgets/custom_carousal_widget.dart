@@ -64,11 +64,14 @@ class CustomCarouselMobileWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return CarouselSlider(
       options: CarouselOptions(
+        viewportFraction: 1.0,
         height: 280.0.sp,
         enlargeCenterPage: true,
         autoPlay: true,
+        aspectRatio: 16 / 8,
         autoPlayCurve: Curves.fastOutSlowIn,
         enableInfiniteScroll: true,
+        scrollPhysics: const AlwaysScrollableScrollPhysics(),
         autoPlayInterval: const Duration(seconds: 20),
         autoPlayAnimationDuration: const Duration(milliseconds: 800),
         onPageChanged: onPageChanged,
@@ -79,8 +82,8 @@ class CustomCarouselMobileWidget extends StatelessWidget {
               margin: EdgeInsets.all(5.0.sp),
               child: Image.asset(
                 item,
-                width: 1000.0.sp,
-                height: 1000.0.sp,
+                width: 1300.0.sp,
+                height: 1300.0.sp,
                 colorBlendMode: BlendMode.srcOver,
               ),
             ),

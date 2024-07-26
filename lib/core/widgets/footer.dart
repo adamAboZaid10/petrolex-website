@@ -241,7 +241,6 @@ class FooterMobileWidget extends StatelessWidget {
                       width: 100.sp,
                       height: 100.sp,
                       color: Colors.white,
-                      ///ToDo change change
                     ),
                     SizedBox(width: 180.sp),
                     Text(

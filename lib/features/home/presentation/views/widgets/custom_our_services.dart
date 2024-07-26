@@ -9,7 +9,7 @@ class CustomOurServices extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding:  EdgeInsets.symmetric(
+      padding: EdgeInsets.symmetric(
         horizontal: 20.0.w,
       ),
       child: Container(
@@ -78,8 +78,8 @@ class CustomMobileOurServices extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(
-        horizontal: 20.0,
+      padding: EdgeInsets.symmetric(
+        horizontal: 20.0.sp,
       ),
       child: Container(
         decoration: BoxDecoration(
@@ -87,13 +87,16 @@ class CustomMobileOurServices extends StatelessWidget {
           borderRadius: BorderRadius.circular(5.0.sp),
         ),
         child: Padding(
-          padding: EdgeInsets.all(20.sp),
+          padding: EdgeInsets.symmetric(
+            horizontal: 20.sp,
+            vertical: 40.sp,
+          ),
           child: Column(
             children: [
               Text(
                 'Our Services',
                 style: TextStyle(
-                  fontSize: 40.sp,
+                  fontSize: 50.sp,
                   fontWeight: FontWeight.w900,
                   color: Colors.white,
                 ),
@@ -104,7 +107,7 @@ class CustomMobileOurServices extends StatelessWidget {
               Text(
                 'A dynamic and growing company. BBV1 Oil Fields Services and relies on decades of experience from its Diverse and large workforce.BBV1 Oil Fields and services are Focused on serving on OIL & GAS industry by providing services such as: ',
                 style: TextStyle(
-                  fontSize: 20.sp,
+                  fontSize: 35.sp,
                   fontWeight: FontWeight.w400,
                   color: Colors.white,
                 ),
@@ -114,7 +117,7 @@ class CustomMobileOurServices extends StatelessWidget {
               ),
               SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
-                physics: BouncingScrollPhysics(),
+                physics: const BouncingScrollPhysics(),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
@@ -123,7 +126,7 @@ class CustomMobileOurServices extends StatelessWidget {
                       title: 'Exploration & Drilling Support',
                       width: 200,
                       height: 200,
-                      fontSize: 20,
+                      fontSize: 30,
                     ),
                     SizedBox(
                       width: 20.w,
@@ -133,7 +136,7 @@ class CustomMobileOurServices extends StatelessWidget {
                       title: 'Fuel Products Trading',
                       width: 200,
                       height: 200,
-                      fontSize: 20,
+                      fontSize: 30,
                     ),
                     SizedBox(
                       width: 20.w,
@@ -143,7 +146,7 @@ class CustomMobileOurServices extends StatelessWidget {
                       title: 'Procurement Services',
                       width: 200,
                       height: 200,
-                      fontSize: 20,
+                      fontSize: 30,
                     ),
                     SizedBox(
                       width: 20.w,
@@ -153,7 +156,7 @@ class CustomMobileOurServices extends StatelessWidget {
                       title: 'Logistics',
                       width: 200,
                       height: 200,
-                      fontSize: 20,
+                      fontSize: 30,
                     ),
                   ],
                 ),

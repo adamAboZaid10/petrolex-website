@@ -16,8 +16,9 @@ class HomeScreenMobileBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final List<String> imgList = [
-      'assets/image/slider1.jpg',
-      'assets/image/slider3.jpg',
+      'assets/image/slide1.jpg',
+      'assets/image/slide2.jpg',
+      'assets/image/slide3.jpg',
     ];
     return BlocBuilder<HomeBloc, HomeState>(
       builder: (context, state) {
@@ -28,6 +29,7 @@ class HomeScreenMobileBody extends StatelessWidget {
                 height: 20.h,
               ),
               IgnorePointer(
+                ignoring: false,
                 child: CustomCarouselMobileWidget(
                   imgList: imgList,
                   onPageChanged: (index, reason) {
