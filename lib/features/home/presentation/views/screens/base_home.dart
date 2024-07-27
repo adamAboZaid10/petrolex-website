@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:petrolex/features/home/presentation/views/screens/home_screen_mobile.dart';
-import 'package:petrolex/features/home/presentation/views/screens/home_screen_web.dart';
 
-class BaseHome extends StatelessWidget {
-  const BaseHome({super.key});
+import 'home_screen.dart';
+import 'home_screen_mobile.dart';
+
+class ResponsiveScreen extends StatelessWidget {
+  const ResponsiveScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -27,4 +28,5 @@ class BaseHome extends StatelessWidget {
       },
     );
   }
+
 }

@@ -14,7 +14,7 @@ class CustomOurServices extends StatelessWidget {
       ),
       child: Container(
         decoration: BoxDecoration(
-          color: AppColors.darkGreenColor.withOpacity(0.5),
+          color: AppColors.darkGreenColor.withOpacity(0.8),
           borderRadius: BorderRadius.circular(5.0.sp),
         ),
         child: Padding(
@@ -77,92 +77,87 @@ class CustomMobileOurServices extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.symmetric(
-        horizontal: 20.0.sp,
+    return Container(
+      decoration: BoxDecoration(
+        color: AppColors.darkGreenColor.withOpacity(0.8),
+        borderRadius: BorderRadius.circular(5.0.sp),
       ),
-      child: Container(
-        decoration: BoxDecoration(
-          color: AppColors.darkGreenColor.withOpacity(0.5),
-          borderRadius: BorderRadius.circular(5.0.sp),
+      child: Padding(
+        padding: EdgeInsets.symmetric(
+          horizontal: 20.sp,
+          vertical: 40.sp,
         ),
-        child: Padding(
-          padding: EdgeInsets.symmetric(
-            horizontal: 20.sp,
-            vertical: 40.sp,
-          ),
-          child: Column(
-            children: [
-              Text(
-                'Our Services',
-                style: TextStyle(
-                  fontSize: 50.sp,
-                  fontWeight: FontWeight.w900,
-                  color: Colors.white,
-                ),
+        child: Column(
+          children: [
+            Text(
+              'Our Services',
+              style: TextStyle(
+                fontSize: 50.sp,
+                fontWeight: FontWeight.w900,
+                color: Colors.white,
               ),
-              SizedBox(
-                height: 10.h,
+            ),
+            SizedBox(
+              height: 10.h,
+            ),
+            Text(
+              'A dynamic and growing company. BBV1 Oil Fields Services and relies on decades of experience from its Diverse and large workforce.BBV1 Oil Fields and services are Focused on serving on OIL & GAS industry by providing services such as: ',
+              style: TextStyle(
+                fontSize: 35.sp,
+                fontWeight: FontWeight.w400,
+                color: Colors.white,
               ),
-              Text(
-                'A dynamic and growing company. BBV1 Oil Fields Services and relies on decades of experience from its Diverse and large workforce.BBV1 Oil Fields and services are Focused on serving on OIL & GAS industry by providing services such as: ',
-                style: TextStyle(
-                  fontSize: 35.sp,
-                  fontWeight: FontWeight.w400,
-                  color: Colors.white,
-                ),
+            ),
+            SizedBox(
+              height: 20.h,
+            ),
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              physics: const BouncingScrollPhysics(),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  const CustomOurServicesItem(
+                    imgPath: 'assets/image/service1.jpg',
+                    title: 'Exploration & Drilling Support',
+                    width: 200,
+                    height: 200,
+                    fontSize: 30,
+                  ),
+                  SizedBox(
+                    width: 20.w,
+                  ),
+                  const CustomOurServicesItem(
+                    imgPath: 'assets/image/service2.jpg',
+                    title: 'Fuel Products Trading',
+                    width: 200,
+                    height: 200,
+                    fontSize: 30,
+                  ),
+                  SizedBox(
+                    width: 20.w,
+                  ),
+                  const CustomOurServicesItem(
+                    imgPath: 'assets/image/service3.jpg',
+                    title: 'Procurement Services',
+                    width: 200,
+                    height: 200,
+                    fontSize: 30,
+                  ),
+                  SizedBox(
+                    width: 20.w,
+                  ),
+                  const CustomOurServicesItem(
+                    imgPath: 'assets/image/service4.jpg',
+                    title: 'Logistics',
+                    width: 200,
+                    height: 200,
+                    fontSize: 30,
+                  ),
+                ],
               ),
-              SizedBox(
-                height: 20.h,
-              ),
-              SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                physics: const BouncingScrollPhysics(),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    const CustomOurServicesItem(
-                      imgPath: 'assets/image/service1.jpg',
-                      title: 'Exploration & Drilling Support',
-                      width: 200,
-                      height: 200,
-                      fontSize: 30,
-                    ),
-                    SizedBox(
-                      width: 20.w,
-                    ),
-                    const CustomOurServicesItem(
-                      imgPath: 'assets/image/service2.jpg',
-                      title: 'Fuel Products Trading',
-                      width: 200,
-                      height: 200,
-                      fontSize: 30,
-                    ),
-                    SizedBox(
-                      width: 20.w,
-                    ),
-                    const CustomOurServicesItem(
-                      imgPath: 'assets/image/service3.jpg',
-                      title: 'Procurement Services',
-                      width: 200,
-                      height: 200,
-                      fontSize: 30,
-                    ),
-                    SizedBox(
-                      width: 20.w,
-                    ),
-                    const CustomOurServicesItem(
-                      imgPath: 'assets/image/service4.jpg',
-                      title: 'Logistics',
-                      width: 200,
-                      height: 200,
-                      fontSize: 30,
-                    ),
-                  ],
-                ),
-              ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );

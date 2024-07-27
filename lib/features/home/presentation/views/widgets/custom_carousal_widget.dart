@@ -78,14 +78,11 @@ class CustomCarouselMobileWidget extends StatelessWidget {
       ),
       items: imgList
           .map(
-            (item) => Container(
-              margin: EdgeInsets.all(5.0.sp),
-              child: Image.asset(
-                item,
-                width: 1300.0.sp,
-                height: 1300.0.sp,
-                colorBlendMode: BlendMode.srcOver,
-              ),
+            (item) => Image.asset(
+              item,
+              width: 1300.0.sp,
+              height: 1300.0.sp,
+              colorBlendMode: BlendMode.srcOver,
             ),
           )
           .toList(),

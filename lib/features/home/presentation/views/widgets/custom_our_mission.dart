@@ -14,7 +14,7 @@ class CustomOurMission extends StatelessWidget {
       child: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(5.0.sp),
-          color: AppColors.darkGreenColor.withOpacity(0.5),
+          color: AppColors.darkGreenColor.withOpacity(0.8),
         ),
         child: Padding(
           padding: EdgeInsets.all( 20.0.sp),
@@ -78,59 +78,56 @@ class CustomOurMissionMobile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 20.0.sp),
-      child: Container(
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(5.0.sp),
-          color: AppColors.darkGreenColor.withOpacity(0.5),
-        ),
-        child: Padding(
-          padding: EdgeInsets.all( 20.0.sp),
-          child: Column(
-            children: [
-              Container(
-                width: 100.sp,
-                height: 100.sp,
+    return Container(
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(5.0.sp),
+        color: AppColors.darkGreenColor.withOpacity(0.8),
+      ),
+      child: Padding(
+        padding: EdgeInsets.all( 20.0.sp),
+        child: Column(
+          children: [
+            Container(
+              width: 100.sp,
+              height: 100.sp,
+              color: Colors.white,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  SvgPicture.asset(
+                    "assets/svg/rocket.svg",
+                    fit: BoxFit.cover,
+                    alignment: Alignment.center,
+                    width: 60.sp,
+                    height: 60.sp,
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 10.h,
+            ),
+            Text(
+              'Our Mission',
+              style: TextStyle(
+                color: AppColors.lightBrownColor,
+                fontSize: 50.sp,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            SizedBox(
+              height: 10.h,
+            ),
+            Text(
+              'To create, strengthen, and Expand our reach and our services by growing our network of partners with International Leading services Provider and reaching new and bigger markets regionally in the MENA region and Beyond.',
+              style: TextStyle(
                 color: Colors.white,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    SvgPicture.asset(
-                      "assets/svg/rocket.svg",
-                      fit: BoxFit.cover,
-                      alignment: Alignment.center,
-                      width: 60.sp,
-                      height: 60.sp,
-                    ),
-                  ],
-                ),
+                fontSize: 40.sp,
+                fontWeight: FontWeight.w400,
               ),
-              SizedBox(
-                height: 10.h,
-              ),
-              Text(
-                'Our Mission',
-                style: TextStyle(
-                  color: AppColors.lightBrownColor,
-                  fontSize: 50.sp,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              SizedBox(
-                height: 10.h,
-              ),
-              Text(
-                'To create, strengthen, and Expand our reach and our services by growing our network of partners with International Leading services Provider and reaching new and bigger markets regionally in the MENA region and Beyond.',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 40.sp,
-                  fontWeight: FontWeight.w400,
-                ),
-              ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );

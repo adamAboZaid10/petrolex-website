@@ -268,7 +268,7 @@ final GlobalKey<FormState> formKey = GlobalKey<FormState>();
                         }
                       },
                       text: 'Send',
-                      fontSize: 50.sp,
+                      fontSize: 70.sp,
                       width: double.infinity,
                       height: 50,
                     );

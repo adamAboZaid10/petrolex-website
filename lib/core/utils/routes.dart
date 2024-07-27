@@ -5,8 +5,6 @@ import '../../features/contact_us/presentation/views/screens/base_contact_us.dar
 import '../../features/home/presentation/views/screens/base_home.dart';
 import '../../features/products/presentation/view/screeens/base_products.dart';
 import '../../features/products/presentation/view/screeens/base_products_details.dart';
-import '../../main.dart';
-
   class AppRoutes{
     static const String home = '/';
     static const String products = '/products';

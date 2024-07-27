@@ -19,15 +19,17 @@ class HomeScreenMobileBody extends StatelessWidget {
       'assets/image/slide1.jpg',
       'assets/image/slide2.jpg',
       'assets/image/slide3.jpg',
+      'assets/image/slide4.jpg',
+      'assets/image/slide5.jpg',
     ];
     return BlocBuilder<HomeBloc, HomeState>(
       builder: (context, state) {
         return SingleChildScrollView(
           child: Column(
             children: [
-              SizedBox(
-                height: 20.h,
-              ),
+              // SizedBox(
+              //   height: 20.h,
+              // ),
               IgnorePointer(
                 ignoring: false,
                 child: CustomCarouselMobileWidget(

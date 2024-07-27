@@ -46,33 +46,6 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class ResponsiveScreen extends StatelessWidget {
-  const ResponsiveScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return LayoutBuilder(
-      builder: (context, constraints) {
-        if (constraints.maxWidth >= 600) {
-          return MediaQuery(
-            data: MediaQuery.of(context).copyWith(
-              textScaler: const TextScaler.linear(1.25),
-            ),
-            child: const HomeScreen(),
-          );
-        } else {
-          return MediaQuery(
-            data: MediaQuery.of(context).copyWith(
-              textScaler: const TextScaler.linear(0.6),
-            ),
-            child: const HomeScreenMobile(),
-          );
-        }
-      },
-    );
-  }
-
-}
 
 void updateTabInfo(String title, String iconPath) {
   // Update the title

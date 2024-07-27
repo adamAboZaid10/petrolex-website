@@ -38,11 +38,9 @@ class FooterWidget extends StatelessWidget {
 
                   children: [
                     Image.asset(
-                      'assets/image/company_logo.png',
+                      'assets/image/logo_company.png',
                       width: 60.sp,
                       height: 60.sp,
-                      color: Colors.white,
-                      ///ToDo change change
 
                     ),
                     SizedBox(width: 60.w,),
@@ -237,16 +235,15 @@ class FooterMobileWidget extends StatelessWidget {
                 Row(
                   children: [
                     Image.asset(
-                      'assets/image/company_logo.png',
-                      width: 100.sp,
-                      height: 100.sp,
-                      color: Colors.white,
+                      'assets/image/logo_company.png',
+                      width: 120.sp,
+                      height: 120.sp,
                     ),
-                    SizedBox(width: 180.sp),
+                    SizedBox(width: 140.sp),
                     Text(
                       'Contact Us',
                       style: TextStyle(
-                        fontSize: 30.sp,
+                        fontSize: 50.sp,
                         color: Colors.white,
                       ),
                     ),
@@ -393,7 +390,7 @@ class FooterMobileWidget extends StatelessWidget {
                                 }
                               },
                               text: 'Submit',
-                              fontSize: 50.sp,
+                              fontSize: 70.sp,
                               width: double.infinity,
                               height: 50,
                             );

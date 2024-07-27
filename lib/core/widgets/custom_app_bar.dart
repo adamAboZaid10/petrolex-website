@@ -18,10 +18,9 @@ class CustomAppBar extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             Image.asset(
-              'assets/image/company_logo.png',
+              'assets/image/logo_company.png',
               fit: BoxFit.contain,
               height: 60.sp,
-              color: Colors.white,
               width: 60.sp,
             ),
             const Spacer(),
@@ -78,11 +77,10 @@ class CustomAppBarMobile extends StatelessWidget {
             Padding(
               padding:  EdgeInsets.all(8.0.sp),
               child: Image.asset(
-                'assets/image/company_logo.png',
+                'assets/image/logo_company.png',
                 fit: BoxFit.contain,
-                color: Colors.white,
-                height: 100.sp,
-                width: 100.sp,
+                height: 120.sp,
+                width: 120.sp,
               ),
             ),
             const Spacer(),
