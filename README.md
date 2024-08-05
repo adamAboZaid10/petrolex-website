@@ -1,16 +1,10 @@
 # Petrolex website
 
-A new Flutter project.
+This website, designed for Petrolex Oil Company, serves as a comprehensive platform showcasing our range of high-quality oil products and features a convenient contact form for seamless customer interaction
 
-## Getting Started
+## 🎨:system design
 
-This project is a starting point for a Flutter application.
+![image](https://github.com/user-attachments/assets/ec4da8a3-cc8d-4a79-ac04-5e2df8480a13)
 
-A few resources to get you started if this is your first Flutter project:
+## 🎬 : screens of app
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
